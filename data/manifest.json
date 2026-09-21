@@ -1,1 +1,10 @@
-{"parts":["data/full-001.txt","data/full-002.txt","data/full-003.txt"],"records":167,"dated_events":108,"records_without_date":76,"source":"20260908_Fecha_resolu.xlsx"}
+{
+  "parts": [
+    "data/live.txt"
+  ],
+  "records": 167,
+  "source_events": 108,
+  "source": "https://1drv.ms/x/c/f0437e1066d439c2/IQAaezAMWJcKR7kTpRNyFiuKAYIZkt_bWwfLzpc3rYnoiBM?e=4q8Ob0",
+  "acts_folder_url": "https://1drv.ms/f/c/f0437e1066d439c2/IgBBlaFsk3DdSbcB9kiuWEWOAbCx9kL3DxbQzUbGFTZYVjk?e=xUVR4U",
+  "synced_at": "2026-09-21T21:57:27.850Z"
+}

@@ -1,0 +1,58 @@
+name: Sincronizar efemerides desde OneDrive
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+  push:
+    paths:
+      - ".github/workflows/sync-efemerides.yml"
+      - "scripts/sync_from_excel.py"
+      - "data/source-config.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-efemerides
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Sincronizar Excel maestro
+        run: python3 scripts/sync_from_excel.py
+
+      - name: Validar resultado
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          manifest = json.loads(Path("data/manifest.json").read_text(encoding="utf-8"))
+          live = json.loads(Path("data/live.txt").read_text(encoding="utf-8"))
+
+          records = len(live.get("r", []))
+          expected = int(manifest.get("records", records))
+          if records != expected:
+              raise SystemExit(f"Registros inconsistentes: live={records}, manifest={expected}")
+          if records == 0:
+              raise SystemExit("La sincronizacion produjo cero registros.")
+          print(f"Validacion correcta: {records} registros.")
+          PY
+
+      - name: Publicar cambios de datos
+        run: |
+          if git diff --quiet -- data/live.txt data/manifest.json; then
+            echo "No hay cambios en el Excel maestro."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/live.txt data/manifest.json
+          git commit -m "Actualiza efemerides desde Excel maestro"
+          git push

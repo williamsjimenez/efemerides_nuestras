@@ -343,7 +343,6 @@ def download_via_personal_onedrive_api(source_url, output_path):
     output_path.write_bytes(data)
     return {
         "method": "onedrive-personal-api",
-        "final_url": final_url,
         "content_type": content_type,
         "bytes": len(data),
         "file_name": item.get("name"),
@@ -372,8 +371,6 @@ def download_xlsx(source_url, output_path):
                 output_path.write_bytes(data)
                 return {
                     "method": "direct",
-                    "requested_url": url,
-                    "final_url": final_url,
                     "content_type": content_type,
                     "bytes": len(data),
                 }

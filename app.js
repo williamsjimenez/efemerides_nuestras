@@ -239,13 +239,10 @@ function openEvent(eventId) {
     ? new Intl.DateTimeFormat("es-CO", { day:"numeric", month:"long", timeZone:"UTC" }).format(new Date(Date.UTC(2000, e.month - 1, e.day)))
     : (e.date_text || "Pendiente");
 
-  const actsFolder = state.data.meta?.acts_folder_url || null;
   const docs = (entity.documents || []).length ? entity.documents.map(d => {
     const href = d.pdf_url || d.source_url;
     return `<a class="doc-link" href="${escapeAttr(href)}" target="_blank" rel="noopener"><span>${escapeHtml(d.label)} <small>${escapeHtml(d.status)}</small></span><strong>Ver documento ↗</strong></a>`;
-  }).join("") : actsFolder
-    ? `<a class="doc-link" href="${escapeAttr(actsFolder)}" target="_blank" rel="noopener"><span>Repositorio general de actos administrativos</span><strong>Abrir carpeta ↗</strong></a>`
-    : `<div class="empty">El acto está registrado, pero el documento todavía no ha sido enlazado.</div>`;
+  }).join("") : `<div class="empty">Este registro todavía no tiene enlace en Enlace documento 1, 2 o 3 del Excel.</div>`;
 
   const age = entity.creation_year ? CALENDAR_YEAR - entity.creation_year : null;
   $("dialogContent").innerHTML = `<p class="eyebrow">${escapeHtml(entity.kind)} · ${escapeHtml(entity.sede || "Sede pendiente")}</p>

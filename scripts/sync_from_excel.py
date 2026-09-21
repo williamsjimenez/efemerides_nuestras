@@ -220,7 +220,7 @@ def make_docs(row, entity_id):
         })
     return docs
 
-def build_compact(rows, source_url, acts_folder_url):
+def build_compact(rows, source_url):
     records = []
     source_event_count = 0
     for pos, row in enumerate(rows, start=1):
@@ -404,7 +404,7 @@ def main():
     rows = parse_xlsx(local)
     if not rows:
         raise RuntimeError("El archivo descargado no contiene registros.")
-    raw = build_compact(rows, source_url, acts_folder_url)
+    raw = build_compact(rows, source_url)
     Path(args.output).write_text(json.dumps(raw, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     manifest = {
         "parts": [args.output],

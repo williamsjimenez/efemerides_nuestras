@@ -14,6 +14,26 @@ function filteredEvents() {
   });
 }
 function entityById(id) { return state.data.entities.find(e => e.id === id); }
+function sedeLabel(value) {
+  if (!value) return null;
+  return /^sede\s/i.test(value) ? value : `Sede ${value}`;
+}
+function eventContext(e, year) {
+  const entity = entityById(e.entity_id) || {};
+  const kind = entity.kind || e.entity_kind || "";
+  const name = entity.name || e.entity_name || "";
+  const sede = entity.sede || e.sede;
+  const facultad = entity.facultad || e.facultad;
+  const parts = [];
+
+  if (kind !== "Sede" && sede) parts.push(sedeLabel(sede));
+  if (kind !== "Sede" && kind !== "Facultad" && facultad && facultad !== name) parts.push(facultad);
+
+  const ann = e.original_year ? year - e.original_year : null;
+  if (ann !== null && ann >= 0) parts.push(`${ann} años`);
+
+  return parts.join(" · ");
+}
 function fillFilters() {
   unique(state.data.entities.map(e => e.sede)).forEach(v => $("sedeFilter").insertAdjacentHTML("beforeend", `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`));
   unique(state.data.entities.map(e => e.kind)).forEach(v => $("kindFilter").insertAdjacentHTML("beforeend", `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`));
@@ -45,9 +65,11 @@ function renderCalendar() {
     const dayEvents = outside ? [] : ev.filter(e => e.day === d.getDate());
     html += `<div class="day ${outside ? "outside" : ""}"><div class="day-number">${d.getDate()}</div>`;
     dayEvents.slice(0,3).forEach(e => {
-      const ann = e.original_year ? y - e.original_year : null;
-      const annText = ann >= 0 ? ` · ${ann} años` : "";
-      html += `<button class="event-chip ${e.status === "con-acto-sin-documento" ? "pending" : ""}" data-event="${e.id}">${escapeHtml(e.entity_name)}${annText}</button>`;
+      const context = eventContext(e, y);
+      html += `<button class="event-chip ${e.status === "con-acto-sin-documento" ? "pending" : ""}" data-event="${e.id}">
+        <span class="event-chip-title">${escapeHtml(e.entity_name)}</span>
+        ${context ? `<span class="event-chip-meta">${escapeHtml(context)}</span>` : ""}
+      </button>`;
     });
     if (dayEvents.length > 3) html += `<div class="more">+${dayEvents.length - 3} más</div>`;
     html += `</div>`;
@@ -60,8 +82,8 @@ function renderMonthList() {
   const m = state.current.getMonth() + 1, y = state.current.getFullYear();
   const ev = filteredEvents().filter(e => e.month === m && e.day).sort((a,b) => a.day - b.day || a.entity_name.localeCompare(b.entity_name, "es"));
   $("monthList").innerHTML = ev.length ? ev.map(e => {
-    const ann = e.original_year ? y - e.original_year : null;
-    return `<article class="event-row"><div class="event-date">${String(e.day).padStart(2,"0")} ${MONTHS[e.month-1]}</div><div><h3>${escapeHtml(e.entity_name)}</h3><p>${escapeHtml(e.event_label)}${ann >= 0 ? ` · ${ann} años en ${y}` : ""} · ${escapeHtml(e.sede || "Sede pendiente")}</p></div><button data-event="${e.id}">Ver ficha</button></article>`;
+    const context = eventContext(e, y);
+    return `<article class="event-row"><div class="event-date">${String(e.day).padStart(2,"0")} ${MONTHS[e.month-1]}</div><div><h3>${escapeHtml(e.entity_name)}</h3><p>${context ? escapeHtml(context) : escapeHtml(e.event_label)}</p></div><button data-event="${e.id}">Ver ficha</button></article>`;
   }).join("") : `<p class="empty">No hay efemérides para los filtros seleccionados en este mes.</p>`;
   document.querySelectorAll("#monthList [data-event]").forEach(btn => btn.addEventListener("click", () => openEvent(btn.dataset.event)));
 }

@@ -14,6 +14,71 @@ function filteredEvents() {
   });
 }
 function entityById(id) { return state.data.entities.find(e => e.id === id); }
+function expandCompact(raw) {
+  if (!raw || !Array.isArray(raw.r)) return raw;
+  const entities = [];
+  const events = [];
+  const eventType = (label) => {
+    const x = String(label || "").toLowerCase();
+    if (x.includes("creación y celebración")) return "creacion-celebracion";
+    if (x === "creación") return "creacion";
+    if (x.includes("celebración")) return "celebracion";
+    if (x.includes(" 2")) return "fecha-2";
+    if (x.includes(" 3")) return "fecha-3";
+    return "hito";
+  };
+
+  raw.r.forEach((r) => {
+    const [id, name, kind, sede, facultad, nivel, acto, actoPor, documents, status, dates] = r;
+    const entity = {
+      id, name, kind, sede, facultad, nivel,
+      programa: kind === "Programa" ? name : null,
+      acto_administrativo: acto,
+      acto_por: actoPor,
+      documents: documents || [],
+      status: status || "pendiente"
+    };
+    entities.push(entity);
+
+    if (Array.isArray(dates) && dates.length) {
+      dates.forEach((item, i) => {
+        const label = item[0] || "Hito histórico";
+        const value = item[1] || null;
+        const exact = typeof value === "string" && /^\\d{4}-\\d{2}-\\d{2}$/.test(value);
+        let year = null, month = null, day = null;
+        if (exact) {
+          const p = value.split("-").map(Number);
+          year = p[0]; month = p[1]; day = p[2];
+        } else if (typeof value === "string") {
+          const match = value.match(/(19|20)\\d{2}/);
+          if (match) year = Number(match[0]);
+        }
+        events.push({
+          id: `${id}-event-${i + 1}`, entity_id: id, entity_name: name, entity_kind: kind,
+          sede, facultad, nivel, event_type: eventType(label), event_label: label,
+          original_date: exact ? value : null, date_text: exact ? null : value,
+          precision: exact ? "day" : "text", original_year: year, month, day,
+          acto_administrativo: acto, acto_por: actoPor, documents: documents || [],
+          status: status || "pendiente", synthetic_pending: false
+        });
+      });
+    } else {
+      events.push({
+        id: `${id}-pending-date`, entity_id: id, entity_name: name, entity_kind: kind,
+        sede, facultad, nivel, event_type: "fecha-pendiente", event_label: "Fecha pendiente",
+        original_date: null, date_text: "Sin fecha registrada en el Excel", precision: "pending",
+        original_year: null, month: null, day: null, acto_administrativo: acto, acto_por: actoPor,
+        documents: documents || [], status: status || "pendiente", synthetic_pending: true
+      });
+    }
+  });
+
+  return {
+    meta: { record_count: raw.m?.records || entities.length, event_count: raw.m?.events || 0 },
+    entities,
+    events
+  };
+}
 function sedeLabel(value) {
   if (!value) return null;
   return /^sede\s/i.test(value) ? value : `Sede ${value}`;
@@ -42,12 +107,13 @@ function renderSummary() {
   const ev = filteredEvents();
   const entityIds = new Set(ev.map(e => e.entity_id));
   const sourced = new Set(ev.filter(e => (e.documents || []).length).map(e => e.entity_id)).size;
-  const undated = ev.filter(e => !e.month || !e.day).length;
+  const dated = ev.filter(e => e.month && e.day && !e.synthetic_pending).length;
+  const noDate = new Set(ev.filter(e => e.synthetic_pending).map(e => e.entity_id)).size;
   $("summary").innerHTML = `
-    <div class="metric"><strong>${entityIds.size}</strong><span>entidades visibles</span></div>
-    <div class="metric"><strong>${ev.length}</strong><span>hitos históricos</span></div>
-    <div class="metric"><strong>${sourced}</strong><span>entidades con fuente localizada</span></div>
-    <div class="metric"><strong>${undated}</strong><span>hitos sin día exacto</span></div>`;
+    <div class="metric"><strong>${entityIds.size}</strong><span>registros visibles</span></div>
+    <div class="metric"><strong>${dated}</strong><span>fechas con día exacto</span></div>
+    <div class="metric"><strong>${noDate}</strong><span>registros sin fecha</span></div>
+    <div class="metric"><strong>${sourced}</strong><span>entidades con fuente localizada</span></div>`;
 }
 function renderCalendar() {
   const y = state.current.getFullYear(), m = state.current.getMonth();
@@ -88,7 +154,7 @@ function renderMonthList() {
   document.querySelectorAll("#monthList [data-event]").forEach(btn => btn.addEventListener("click", () => openEvent(btn.dataset.event)));
 }
 function renderUndated() {
-  const ev = filteredEvents().filter(e => !e.month || !e.day).slice(0,50);
+  const ev = filteredEvents().filter(e => !e.month || !e.day).sort((a,b) => (a.sede || "").localeCompare(b.sede || "", "es") || (a.facultad || "").localeCompare(b.facultad || "", "es") || a.entity_name.localeCompare(b.entity_name, "es"));
   $("undatedList").innerHTML = ev.length ? ev.map(e => `<article class="event-row"><div class="event-date">—</div><div><h3>${escapeHtml(e.entity_name)}</h3><p>${escapeHtml(e.event_label)} · ${escapeHtml(e.date_text || "Fecha pendiente")}</p></div><button data-event="${e.id}">Ver ficha</button></article>`).join("") : `<p class="empty">No hay fechas incompletas con los filtros actuales.</p>`;
   document.querySelectorAll("#undatedList [data-event]").forEach(btn => btn.addEventListener("click", () => openEvent(btn.dataset.event)));
 }
@@ -123,7 +189,7 @@ function icsEscape(value) { return String(value ?? "").replace(/\\/g,"\\\\").rep
 async function init() {
   const manifest = await fetch("data/manifest.json").then(r => r.json());
   const chunks = await Promise.all(manifest.parts.map(p => fetch(p).then(r => r.text())));
-  state.data = JSON.parse(chunks.join(""));
+  state.data = expandCompact(JSON.parse(chunks.join("")));
   fillFilters();
   $("searchInput").addEventListener("input", e => { state.filters.search = e.target.value.trim(); renderAll(); });
   $("sedeFilter").addEventListener("change", e => { state.filters.sede = e.target.value; renderAll(); });

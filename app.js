@@ -1,10 +1,11 @@
+const CALENDAR_YEAR = new Date().getFullYear();
 const state = {
   data: null,
-  current: new Date(),
+  current: new Date(CALENDAR_YEAR, new Date().getMonth(), 1),
   filters: { search: "", sede: "", kind: "", status: "" }
 };
 const $ = (id) => document.getElementById(id);
-const fmtMonth = new Intl.DateTimeFormat("es-CO", { month: "long", year: "numeric" });
+const fmtMonth = new Intl.DateTimeFormat("es-CO", { month: "long" });
 function unique(values) { return [...new Set(values.filter(Boolean))].sort((a,b) => a.localeCompare(b, "es")); }
 function filteredEvents() {
   const f = state.filters;
@@ -18,21 +19,42 @@ function expandCompact(raw) {
   if (!raw || !Array.isArray(raw.r)) return raw;
   const entities = [];
   const events = [];
-  const eventType = (label) => {
-    const x = String(label || "").toLowerCase();
-    if (x.includes("creación y celebración")) return "creacion-celebracion";
-    if (x === "creación") return "creacion";
-    if (x.includes("celebración")) return "celebracion";
-    if (x.includes(" 2")) return "fecha-2";
-    if (x.includes(" 3")) return "fecha-3";
-    return "hito";
+
+  const parsedDate = (value) => {
+    const exact = typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value);
+    if (exact) {
+      const [year, month, day] = value.split("-").map(Number);
+      return { value, exact: true, year, month, day };
+    }
+    let year = null;
+    if (typeof value === "string") {
+      const match = value.match(/(19|20)\d{2}/);
+      if (match) year = Number(match[0]);
+    }
+    return { value, exact: false, year, month: null, day: null };
   };
 
   raw.r.forEach((r) => {
     const [id, name, kind, sede, facultad, nivel, acto, actoPor, documents, status, dates] = r;
+    const sourceDates = Array.isArray(dates) ? dates : [];
+
+    let creationYear = null;
+    let creationDate = null;
+
+    sourceDates.forEach((item) => {
+      const label = String(item?.[0] || "").toLowerCase();
+      if (label === "creación" || label.includes("creación y celebración")) {
+        const p = parsedDate(item?.[1] || null);
+        if (creationYear === null && p.year !== null) creationYear = p.year;
+        if (creationDate === null && p.exact) creationDate = p.value;
+      }
+    });
+
     const entity = {
       id, name, kind, sede, facultad, nivel,
       programa: kind === "Programa" ? name : null,
+      creation_year: creationYear,
+      creation_date: creationDate,
       acto_administrativo: acto,
       acto_por: actoPor,
       documents: documents || [],
@@ -40,41 +62,87 @@ function expandCompact(raw) {
     };
     entities.push(entity);
 
-    if (Array.isArray(dates) && dates.length) {
-      dates.forEach((item, i) => {
-        const label = item[0] || "Hito histórico";
-        const value = item[1] || null;
-        const exact = typeof value === "string" && /^\\d{4}-\\d{2}-\\d{2}$/.test(value);
-        let year = null, month = null, day = null;
-        if (exact) {
-          const p = value.split("-").map(Number);
-          year = p[0]; month = p[1]; day = p[2];
-        } else if (typeof value === "string") {
-          const match = value.match(/(19|20)\\d{2}/);
-          if (match) year = Number(match[0]);
-        }
+    const candidates = [];
+    sourceDates.forEach((item) => {
+      const labelRaw = item?.[0] || "Fecha de celebración";
+      const label = String(labelRaw).toLowerCase();
+      const value = item?.[1] || null;
+
+      const isSameCreationCelebration = label.includes("creación y celebración");
+      const isCelebration = label.includes("celebración");
+      const isComplementary = label.includes("fecha histórica complementaria");
+
+      if (!isSameCreationCelebration && !isCelebration && !isComplementary) return;
+
+      const p = parsedDate(value);
+      candidates.push({
+        label: isComplementary ? "Fecha de celebración complementaria" : "Fecha de celebración",
+        source_label: labelRaw,
+        ...p
+      });
+    });
+
+    const seen = new Set();
+    const uniqueCandidates = candidates.filter((c) => {
+      const key = c.exact ? `d:${c.month}-${c.day}` : `t:${String(c.value || "").trim().toLowerCase()}`;
+      if (!key || seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+
+    if (uniqueCandidates.length) {
+      uniqueCandidates.forEach((c, i) => {
         events.push({
-          id: `${id}-event-${i + 1}`, entity_id: id, entity_name: name, entity_kind: kind,
-          sede, facultad, nivel, event_type: eventType(label), event_label: label,
-          original_date: exact ? value : null, date_text: exact ? null : value,
-          precision: exact ? "day" : "text", original_year: year, month, day,
-          acto_administrativo: acto, acto_por: actoPor, documents: documents || [],
-          status: status || "pendiente", synthetic_pending: false
+          id: `${id}-celebracion-${i + 1}`,
+          entity_id: id,
+          entity_name: name,
+          entity_kind: kind,
+          sede, facultad, nivel,
+          event_type: i === 0 ? "celebracion" : "celebracion-complementaria",
+          event_label: c.label,
+          original_date: c.exact ? c.value : null,
+          date_text: c.exact ? null : c.value,
+          precision: c.exact ? "day" : "text",
+          creation_year: creationYear,
+          creation_date: creationDate,
+          celebration_source_year: c.year,
+          month: c.month,
+          day: c.day,
+          acto_administrativo: acto,
+          acto_por: actoPor,
+          documents: documents || [],
+          status: status || "pendiente",
+          synthetic_pending: false
         });
       });
     } else {
       events.push({
-        id: `${id}-pending-date`, entity_id: id, entity_name: name, entity_kind: kind,
-        sede, facultad, nivel, event_type: "fecha-pendiente", event_label: "Fecha pendiente",
-        original_date: null, date_text: "Sin fecha registrada en el Excel", precision: "pending",
-        original_year: null, month: null, day: null, acto_administrativo: acto, acto_por: actoPor,
-        documents: documents || [], status: status || "pendiente", synthetic_pending: true
+        id: `${id}-pending-celebration`,
+        entity_id: id,
+        entity_name: name,
+        entity_kind: kind,
+        sede, facultad, nivel,
+        event_type: "celebracion-pendiente",
+        event_label: "Fecha de celebración pendiente",
+        original_date: null,
+        date_text: "Sin día y mes de celebración registrados",
+        precision: "pending",
+        creation_year: creationYear,
+        creation_date: creationDate,
+        celebration_source_year: null,
+        month: null,
+        day: null,
+        acto_administrativo: acto,
+        acto_por: actoPor,
+        documents: documents || [],
+        status: status || "pendiente",
+        synthetic_pending: true
       });
     }
   });
 
   return {
-    meta: { record_count: raw.m?.records || entities.length, event_count: raw.m?.events || 0 },
+    meta: { record_count: raw.m?.records || entities.length, event_count: events.length },
     entities,
     events
   };
@@ -94,7 +162,8 @@ function eventContext(e, year) {
   if (kind !== "Sede" && sede) parts.push(sedeLabel(sede));
   if (kind !== "Sede" && kind !== "Facultad" && facultad && facultad !== name) parts.push(facultad);
 
-  const ann = e.original_year ? year - e.original_year : null;
+  const creationYear = entity.creation_year ?? e.creation_year ?? null;
+  const ann = creationYear ? CALENDAR_YEAR - creationYear : null;
   if (ann !== null && ann >= 0) parts.push(`${ann} años`);
 
   return parts.join(" · ");
@@ -108,18 +177,18 @@ function renderSummary() {
   const entityIds = new Set(ev.map(e => e.entity_id));
   const sourced = new Set(ev.filter(e => (e.documents || []).length).map(e => e.entity_id)).size;
   const dated = ev.filter(e => e.month && e.day && !e.synthetic_pending).length;
-  const noDate = new Set(ev.filter(e => e.synthetic_pending).map(e => e.entity_id)).size;
+  const noDate = new Set(ev.filter(e => e.synthetic_pending || !e.month || !e.day).map(e => e.entity_id)).size;
   $("summary").innerHTML = `
     <div class="metric"><strong>${entityIds.size}</strong><span>registros visibles</span></div>
     <div class="metric"><strong>${dated}</strong><span>fechas con día exacto</span></div>
-    <div class="metric"><strong>${noDate}</strong><span>registros sin fecha</span></div>
+    <div class="metric"><strong>${noDate}</strong><span>sin fecha de celebración</span></div>
     <div class="metric"><strong>${sourced}</strong><span>entidades con fuente localizada</span></div>`;
 }
 function renderCalendar() {
-  const y = state.current.getFullYear(), m = state.current.getMonth();
+  const y = CALENDAR_YEAR, m = state.current.getMonth();
   $("monthTitle").textContent = fmtMonth.format(state.current);
   const ev = filteredEvents().filter(e => e.month === m + 1 && e.day);
-  $("monthSubtitle").textContent = `${ev.length} hito${ev.length === 1 ? "" : "s"} registrado${ev.length === 1 ? "" : "s"} en este mes`;
+  $("monthSubtitle").textContent = `${ev.length} celebración${ev.length === 1 ? "" : "es"} registrada${ev.length === 1 ? "" : "s"} en este mes`;
   const first = new Date(y, m, 1), last = new Date(y, m + 1, 0);
   const firstMondayIndex = (first.getDay() + 6) % 7;
   const cells = Math.ceil((firstMondayIndex + last.getDate()) / 7) * 7;
@@ -145,7 +214,7 @@ function renderCalendar() {
 }
 const MONTHS = ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"];
 function renderMonthList() {
-  const m = state.current.getMonth() + 1, y = state.current.getFullYear();
+  const m = state.current.getMonth() + 1, y = CALENDAR_YEAR;
   const ev = filteredEvents().filter(e => e.month === m && e.day).sort((a,b) => a.day - b.day || a.entity_name.localeCompare(b.entity_name, "es"));
   $("monthList").innerHTML = ev.length ? ev.map(e => {
     const context = eventContext(e, y);
@@ -162,21 +231,45 @@ function openEvent(eventId) {
   const e = state.data.events.find(x => x.id === eventId);
   if (!e) return;
   const entity = entityById(e.entity_id);
-  const dateLabel = e.original_date ? new Intl.DateTimeFormat("es-CO", { day:"numeric", month:"long", year:"numeric", timeZone:"UTC" }).format(new Date(e.original_date + "T00:00:00Z")) : (e.date_text || "Pendiente");
+  const celebrationLabel = e.month && e.day
+    ? new Intl.DateTimeFormat("es-CO", { day:"numeric", month:"long", timeZone:"UTC" }).format(new Date(Date.UTC(2000, e.month - 1, e.day)))
+    : (e.date_text || "Pendiente");
+
   const docs = (entity.documents || []).length ? entity.documents.map(d => {
     const href = d.pdf_url || d.source_url, text = d.pdf_url ? "Ver PDF" : "Abrir fuente";
     return `<a class="doc-link" href="${escapeAttr(href)}" target="_blank" rel="noopener"><span>${escapeHtml(d.label)} <small>${escapeHtml(d.status)}</small></span><strong>${text} ↗</strong></a>`;
   }).join("") : `<div class="empty">El acto está registrado, pero el PDF todavía no ha sido incorporado al repositorio.</div>`;
-  $("dialogContent").innerHTML = `<p class="eyebrow">${escapeHtml(entity.kind)} · ${escapeHtml(entity.sede || "Sede pendiente")}</p><h2>${escapeHtml(entity.name)}</h2><p>${escapeHtml(e.event_label)}: <strong>${escapeHtml(dateLabel)}</strong></p><div class="detail-meta"><div><small>Facultad</small>${escapeHtml(entity.facultad || "No aplica / pendiente")}</div><div><small>Nivel</small>${escapeHtml(entity.nivel || entity.kind)}</div><div><small>Acto administrativo</small>${escapeHtml(entity.acto_administrativo || "Pendiente")}</div><div><small>Autoridad</small>${escapeHtml(entity.acto_por || "Pendiente")}</div></div><span class="badge ${entity.status === "con-acto-sin-documento" ? "pending" : ""}">${escapeHtml(entity.status)}</span><h3>Soporte documental</h3><div class="docs">${docs}</div>`;
+
+  const age = entity.creation_year ? CALENDAR_YEAR - entity.creation_year : null;
+  $("dialogContent").innerHTML = `<p class="eyebrow">${escapeHtml(entity.kind)} · ${escapeHtml(entity.sede || "Sede pendiente")}</p>
+    <h2>${escapeHtml(entity.name)}</h2>
+    <p>Fecha de celebración: <strong>${escapeHtml(celebrationLabel)}</strong></p>
+    <div class="detail-meta">
+      <div><small>Año de creación</small>${escapeHtml(entity.creation_year ?? "Pendiente")}</div>
+      <div><small>Años cumplidos en ${CALENDAR_YEAR}</small>${escapeHtml(age ?? "Pendiente")}</div>
+      <div><small>Facultad</small>${escapeHtml(entity.facultad || "No aplica / pendiente")}</div>
+      <div><small>Nivel</small>${escapeHtml(entity.nivel || entity.kind)}</div>
+      <div><small>Acto administrativo</small>${escapeHtml(entity.acto_administrativo || "Pendiente")}</div>
+      <div><small>Autoridad</small>${escapeHtml(entity.acto_por || "Pendiente")}</div>
+    </div>
+    <span class="badge ${entity.status === "con-acto-sin-documento" ? "pending" : ""}">${escapeHtml(entity.status)}</span>
+    <h3>Soporte documental</h3><div class="docs">${docs}</div>`;
   $("detailDialog").showModal();
 }
 function downloadICS() {
   const ev = filteredEvents().filter(e => e.month && e.day), now = new Date(), stamp = now.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}Z$/,"Z");
   const lines = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Efemerides UNAL//ES","CALSCALE:GREGORIAN"];
   ev.forEach(e => {
-    const yr = e.original_year || now.getFullYear(), mm = String(e.month).padStart(2,"0"), dd = String(e.day).padStart(2,"0");
-    const desc = [e.event_label, e.acto_administrativo, e.sede].filter(Boolean).join(" | ").replace(/\n/g," ");
-    lines.push("BEGIN:VEVENT",`UID:${e.id}@efemerides-unal`,`DTSTAMP:${stamp}`,`DTSTART;VALUE=DATE:${yr}${mm}${dd}`,"RRULE:FREQ=YEARLY",`SUMMARY:${icsEscape(e.entity_name)}`,`DESCRIPTION:${icsEscape(desc)}`,"END:VEVENT");
+    const mm = String(e.month).padStart(2,"0"), dd = String(e.day).padStart(2,"0");
+    const start = `${CALENDAR_YEAR}${mm}${dd}`;
+    const entity = entityById(e.entity_id) || {};
+    const desc = [
+      "Fecha anual de celebración",
+      entity.creation_year ? `Creación: ${entity.creation_year}` : null,
+      e.acto_administrativo,
+      e.sede
+    ].filter(Boolean).join(" | ").replace(/\n/g," ");
+    lines.push("BEGIN:VEVENT",`UID:${e.id}@efemerides-unal`,`DTSTAMP:${stamp}`,`DTSTART;VALUE=DATE:${start}`,"RRULE:FREQ=YEARLY",`SUMMARY:${icsEscape(e.entity_name)}`,`DESCRIPTION:${icsEscape(desc)}`,"END:VEVENT");
   });
   lines.push("END:VCALENDAR");
   const blob = new Blob([lines.join("\r\n")], {type:"text/calendar;charset=utf-8"}), url = URL.createObjectURL(blob), a = document.createElement("a");
@@ -195,8 +288,8 @@ async function init() {
   $("sedeFilter").addEventListener("change", e => { state.filters.sede = e.target.value; renderAll(); });
   $("kindFilter").addEventListener("change", e => { state.filters.kind = e.target.value; renderAll(); });
   $("statusFilter").addEventListener("change", e => { state.filters.status = e.target.value; renderAll(); });
-  $("prevMonth").addEventListener("click", () => { state.current = new Date(state.current.getFullYear(), state.current.getMonth()-1, 1); renderAll(); });
-  $("nextMonth").addEventListener("click", () => { state.current = new Date(state.current.getFullYear(), state.current.getMonth()+1, 1); renderAll(); });
+  $("prevMonth").addEventListener("click", () => { state.current = new Date(CALENDAR_YEAR, (state.current.getMonth() + 11) % 12, 1); renderAll(); });
+  $("nextMonth").addEventListener("click", () => { state.current = new Date(CALENDAR_YEAR, (state.current.getMonth() + 1) % 12, 1); renderAll(); });
   $("downloadIcs").addEventListener("click", downloadICS);
   $("closeDialog").addEventListener("click", () => $("detailDialog").close());
   $("detailDialog").addEventListener("click", e => { if (e.target === $("detailDialog")) $("detailDialog").close(); });

@@ -272,7 +272,6 @@ def build_compact(rows, source_url):
             "records": len(records),
             "events": source_event_count,
             "source_excel_url": source_url,
-            "acts_folder_url": acts_folder_url,
             "synced_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         },
         "r": records,
@@ -394,7 +393,6 @@ def main():
     args = ap.parse_args()
     config = json.loads(Path(args.config).read_text(encoding="utf-8"))
     source_url = config["excel_url"]
-    acts_folder_url = config.get("acts_folder_url")
     local = Path(args.local_xlsx) if args.local_xlsx else Path(".sync/efemerides.xlsx")
     local.parent.mkdir(parents=True, exist_ok=True)
     if args.local_xlsx:
@@ -411,7 +409,6 @@ def main():
         "records": raw["m"]["records"],
         "source_events": raw["m"]["events"],
         "source": source_url,
-        "acts_folder_url": acts_folder_url,
         "synced_at": raw["m"]["synced_at"],
     }
     Path(args.manifest).write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")

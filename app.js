@@ -142,7 +142,11 @@ function expandCompact(raw) {
   });
 
   return {
-    meta: { record_count: raw.m?.records || entities.length, event_count: events.length },
+    meta: {
+      ...(raw.m || {}),
+      record_count: raw.m?.records || entities.length,
+      event_count: events.length
+    },
     entities,
     events
   };
@@ -235,10 +239,13 @@ function openEvent(eventId) {
     ? new Intl.DateTimeFormat("es-CO", { day:"numeric", month:"long", timeZone:"UTC" }).format(new Date(Date.UTC(2000, e.month - 1, e.day)))
     : (e.date_text || "Pendiente");
 
+  const actsFolder = state.data.meta?.acts_folder_url || null;
   const docs = (entity.documents || []).length ? entity.documents.map(d => {
-    const href = d.pdf_url || d.source_url, text = d.pdf_url ? "Ver PDF" : "Abrir fuente";
-    return `<a class="doc-link" href="${escapeAttr(href)}" target="_blank" rel="noopener"><span>${escapeHtml(d.label)} <small>${escapeHtml(d.status)}</small></span><strong>${text} ↗</strong></a>`;
-  }).join("") : `<div class="empty">El acto está registrado, pero el PDF todavía no ha sido incorporado al repositorio.</div>`;
+    const href = d.pdf_url || d.source_url;
+    return `<a class="doc-link" href="${escapeAttr(href)}" target="_blank" rel="noopener"><span>${escapeHtml(d.label)} <small>${escapeHtml(d.status)}</small></span><strong>Ver documento ↗</strong></a>`;
+  }).join("") : actsFolder
+    ? `<a class="doc-link" href="${escapeAttr(actsFolder)}" target="_blank" rel="noopener"><span>Repositorio general de actos administrativos</span><strong>Abrir carpeta ↗</strong></a>`
+    : `<div class="empty">El acto está registrado, pero el documento todavía no ha sido enlazado.</div>`;
 
   const age = entity.creation_year ? CALENDAR_YEAR - entity.creation_year : null;
   $("dialogContent").innerHTML = `<p class="eyebrow">${escapeHtml(entity.kind)} · ${escapeHtml(entity.sede || "Sede pendiente")}</p>
@@ -280,8 +287,16 @@ function escapeHtml(value) { return String(value ?? "").replace(/[&<>"']/g, ch =
 function escapeAttr(value) { return escapeHtml(value); }
 function icsEscape(value) { return String(value ?? "").replace(/\\/g,"\\\\").replace(/,/g,"\\,").replace(/;/g,"\\;").replace(/\n/g,"\\n"); }
 async function init() {
-  const manifest = await fetch("data/manifest.json").then(r => r.json());
-  const chunks = await Promise.all(manifest.parts.map(p => fetch(p).then(r => r.text())));
+  const rawBase = "https://raw.githubusercontent.com/williamsjimenez/efemerides_nuestras/main/";
+  const cacheBust = Date.now();
+  const manifest = await fetch(`${rawBase}data/manifest.json?v=${cacheBust}`, { cache: "no-store" }).then(r => {
+    if (!r.ok) throw new Error("No se pudo cargar el manifiesto de datos");
+    return r.json();
+  });
+  const chunks = await Promise.all(manifest.parts.map(p => fetch(`${rawBase}${p}?v=${cacheBust}`, { cache: "no-store" }).then(r => {
+    if (!r.ok) throw new Error(`No se pudo cargar ${p}`);
+    return r.text();
+  })));
   state.data = expandCompact(JSON.parse(chunks.join("")));
   fillFilters();
   $("searchInput").addEventListener("input", e => { state.filters.search = e.target.value.trim(); renderAll(); });

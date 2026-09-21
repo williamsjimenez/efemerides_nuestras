@@ -34,10 +34,12 @@ input, select { display: block; width: 100%; margin-top: 6px; padding: 11px 12px
 .button { padding: 12px 16px; background: var(--ink); color: #fff; }
 .weekdays, .calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 7px; }
 .weekdays span { text-align: center; color: var(--muted); font-size: .74rem; font-weight: 700; padding: 8px 0; }
-.day { min-height: 124px; background: #fafbfa; border: 1px solid var(--line); border-radius: 12px; padding: 8px; overflow: hidden; }
+.day { min-height: 154px; background: #fafbfa; border: 1px solid var(--line); border-radius: 12px; padding: 8px; overflow: hidden; }
 .day.outside { opacity: .35; }
 .day-number { font-size: .78rem; color: var(--muted); font-weight: 700; margin-bottom: 6px; }
-.event-chip { width: 100%; text-align: left; border: 0; background: var(--accent-soft); color: #173d27; border-radius: 8px; margin: 3px 0; padding: 6px 7px; font-size: .72rem; line-height: 1.2; cursor: pointer; }
+.event-chip { width: 100%; text-align: left; border: 0; background: var(--accent-soft); color: #173d27; border-radius: 9px; margin: 4px 0; padding: 8px 9px; line-height: 1.2; cursor: pointer; }
+.event-chip-title { display: block; font-size: .73rem; font-weight: 750; line-height: 1.22; }
+.event-chip-meta { display: block; margin-top: 4px; font-size: .62rem; font-weight: 500; line-height: 1.25; opacity: .78; }
 .event-chip.pending { background: var(--warning-soft); color: var(--warning); }
 .more { font-size: .7rem; color: var(--muted); padding: 4px 2px; }
 .section-heading { display: flex; justify-content: space-between; gap: 20px; align-items: end; }
@@ -61,5 +63,5 @@ dialog::backdrop { background: rgba(12, 18, 14, .62); }
 .doc-link strong { color: var(--accent); }
 .empty { color: var(--muted); padding: 18px 4px; }
 footer { max-width: 1280px; margin: 0 auto; padding: 20px 28px 50px; color: var(--muted); font-size: .8rem; }
-@media (max-width: 900px) { .topbar { align-items: start; flex-direction: column; } .controls { grid-template-columns: 1fr 1fr; } .summary { grid-template-columns: 1fr 1fr; } .day { min-height: 100px; } }
+@media (max-width: 900px) { .topbar { align-items: start; flex-direction: column; } .controls { grid-template-columns: 1fr 1fr; } .summary { grid-template-columns: 1fr 1fr; } .day { min-height: 125px; } }
 @media (max-width: 650px) { main, .topbar, footer { padding-left: 14px; padding-right: 14px; } .controls { grid-template-columns: 1fr; } .weekdays { display: none; } .calendar { grid-template-columns: 1fr; } .day, .day.outside { min-height: auto; opacity: 1; } .day.outside { display: none; } .event-row { grid-template-columns: 68px 1fr; } .event-row button { grid-column: 2; justify-self: start; } .detail-meta { grid-template-columns: 1fr; } }

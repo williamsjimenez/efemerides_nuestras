@@ -2,7 +2,7 @@ const CALENDAR_YEAR = new Date().getFullYear();
 const state = {
   data: null,
   current: new Date(CALENDAR_YEAR, new Date().getMonth(), 1),
-  filters: { search: "", sede: "", kind: "", status: "" }
+  filters: { search: "", sede: "", kind: "" }
 };
 const $ = (id) => document.getElementById(id);
 const fmtMonth = new Intl.DateTimeFormat("es-CO", { month: "long" });
@@ -11,7 +11,7 @@ function filteredEvents() {
   const f = state.filters;
   return state.data.events.filter(e => {
     const haystack = [e.entity_name, e.sede, e.facultad, e.nivel, e.acto_administrativo, e.event_label].filter(Boolean).join(" ").toLowerCase();
-    return (!f.search || haystack.includes(f.search.toLowerCase())) && (!f.sede || e.sede === f.sede) && (!f.kind || e.entity_kind === f.kind) && (!f.status || e.status === f.status);
+    return (!f.search || haystack.includes(f.search.toLowerCase())) && (!f.sede || e.sede === f.sede) && (!f.kind || e.entity_kind === f.kind);
   });
 }
 function entityById(id) { return state.data.entities.find(e => e.id === id); }
@@ -176,18 +176,6 @@ function fillFilters() {
   unique(state.data.entities.map(e => e.sede)).forEach(v => $("sedeFilter").insertAdjacentHTML("beforeend", `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`));
   unique(state.data.entities.map(e => e.kind)).forEach(v => $("kindFilter").insertAdjacentHTML("beforeend", `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`));
 }
-function renderSummary() {
-  const ev = filteredEvents();
-  const entityIds = new Set(ev.map(e => e.entity_id));
-  const sourced = new Set(ev.filter(e => (e.documents || []).length).map(e => e.entity_id)).size;
-  const dated = ev.filter(e => e.month && e.day && !e.synthetic_pending).length;
-  const noDate = new Set(ev.filter(e => e.synthetic_pending || !e.month || !e.day).map(e => e.entity_id)).size;
-  $("summary").innerHTML = `
-    <div class="metric"><strong>${entityIds.size}</strong><span>registros visibles</span></div>
-    <div class="metric"><strong>${dated}</strong><span>fechas con día exacto</span></div>
-    <div class="metric"><strong>${noDate}</strong><span>sin fecha de celebración</span></div>
-    <div class="metric"><strong>${sourced}</strong><span>entidades con fuente localizada</span></div>`;
-}
 function renderCalendar() {
   const y = CALENDAR_YEAR, m = state.current.getMonth();
   $("monthTitle").textContent = fmtMonth.format(state.current);
@@ -225,11 +213,6 @@ function renderMonthList() {
     return `<article class="event-row"><div class="event-date">${String(e.day).padStart(2,"0")} ${MONTHS[e.month-1]}</div><div><h3>${escapeHtml(e.entity_name)}</h3><p>${context ? escapeHtml(context) : escapeHtml(e.event_label)}</p></div><button data-event="${e.id}">Ver ficha</button></article>`;
   }).join("") : `<p class="empty">No hay efemérides para los filtros seleccionados en este mes.</p>`;
   document.querySelectorAll("#monthList [data-event]").forEach(btn => btn.addEventListener("click", () => openEvent(btn.dataset.event)));
-}
-function renderUndated() {
-  const ev = filteredEvents().filter(e => !e.month || !e.day).sort((a,b) => (a.sede || "").localeCompare(b.sede || "", "es") || (a.facultad || "").localeCompare(b.facultad || "", "es") || a.entity_name.localeCompare(b.entity_name, "es"));
-  $("undatedList").innerHTML = ev.length ? ev.map(e => `<article class="event-row"><div class="event-date">—</div><div><h3>${escapeHtml(e.entity_name)}</h3><p>${escapeHtml(e.event_label)} · ${escapeHtml(e.date_text || "Fecha pendiente")}</p></div><button data-event="${e.id}">Ver ficha</button></article>`).join("") : `<p class="empty">No hay fechas incompletas con los filtros actuales.</p>`;
-  document.querySelectorAll("#undatedList [data-event]").forEach(btn => btn.addEventListener("click", () => openEvent(btn.dataset.event)));
 }
 function openEvent(eventId) {
   const e = state.data.events.find(x => x.id === eventId);
@@ -279,7 +262,7 @@ function downloadICS() {
   const blob = new Blob([lines.join("\r\n")], {type:"text/calendar;charset=utf-8"}), url = URL.createObjectURL(blob), a = document.createElement("a");
   a.href = url; a.download = "efemerides-unal.ics"; a.click(); URL.revokeObjectURL(url);
 }
-function renderAll() { renderSummary(); renderCalendar(); renderMonthList(); renderUndated(); }
+function renderAll() { renderCalendar(); renderMonthList(); }
 function escapeHtml(value) { return String(value ?? "").replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch])); }
 function escapeAttr(value) { return escapeHtml(value); }
 function icsEscape(value) { return String(value ?? "").replace(/\\/g,"\\\\").replace(/,/g,"\\,").replace(/;/g,"\\;").replace(/\n/g,"\\n"); }
@@ -299,7 +282,6 @@ async function init() {
   $("searchInput").addEventListener("input", e => { state.filters.search = e.target.value.trim(); renderAll(); });
   $("sedeFilter").addEventListener("change", e => { state.filters.sede = e.target.value; renderAll(); });
   $("kindFilter").addEventListener("change", e => { state.filters.kind = e.target.value; renderAll(); });
-  $("statusFilter").addEventListener("change", e => { state.filters.status = e.target.value; renderAll(); });
   $("prevMonth").addEventListener("click", () => { state.current = new Date(CALENDAR_YEAR, (state.current.getMonth() + 11) % 12, 1); renderAll(); });
   $("nextMonth").addEventListener("click", () => { state.current = new Date(CALENDAR_YEAR, (state.current.getMonth() + 1) % 12, 1); renderAll(); });
   $("downloadIcs").addEventListener("click", downloadICS);

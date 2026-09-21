@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import base64
 import json
 import re
 import urllib.parse
@@ -277,6 +278,77 @@ def build_compact(rows, source_url, acts_folder_url):
         "r": records,
     }
 
+def fetch_bytes(url, headers=None, data=None, timeout=60):
+    req = urllib.request.Request(url, data=data, headers=headers or {})
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return resp.read(), resp.geturl(), resp.headers.get("Content-Type", "")
+
+def download_via_personal_onedrive_api(source_url, output_path):
+    token_body = json.dumps({"appId": "5cbed6ac-a083-4e14-b191-b4ba07653de2"}).encode("utf-8")
+    token_bytes, _, _ = fetch_bytes(
+        "https://api-badgerp.svc.ms/v1.0/token",
+        headers={
+            "User-Agent": "Mozilla/5.0 EfemeridesUNALSync/1.0",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+        data=token_body,
+    )
+    token_payload = json.loads(token_bytes.decode("utf-8"))
+    badger_token = token_payload.get("token")
+    if not badger_token:
+        raise RuntimeError("OneDrive no devolvió el token temporal de acceso.")
+
+    encoded = base64.urlsafe_b64encode(source_url.encode("utf-8")).decode("ascii").rstrip("=")
+    api_url = (
+        "https://my.microsoftpersonalcontent.com/_api/v2.0/shares/"
+        f"u!{encoded}/driveitem?select=@content.downloadUrl,name"
+    )
+    item_bytes, _, _ = fetch_bytes(
+        api_url,
+        headers={
+            "User-Agent": "Mozilla/5.0 EfemeridesUNALSync/1.0",
+            "Accept": "application/json",
+            "Prefer": "autoredeem",
+            "Authorization": f"Badger {badger_token}",
+        },
+    )
+    item = json.loads(item_bytes.decode("utf-8"))
+    download_url = item.get("@content.downloadUrl")
+    if not download_url:
+        raise RuntimeError("OneDrive no devolvió @content.downloadUrl para el Excel compartido.")
+
+    try:
+        data, final_url, content_type = fetch_bytes(
+            download_url,
+            headers={"User-Agent": "Mozilla/5.0 EfemeridesUNALSync/1.0"},
+        )
+    except Exception:
+        parsed = urllib.parse.urlparse(download_url)
+        tempauth = urllib.parse.parse_qs(parsed.query).get("tempauth", [None])[0]
+        if not tempauth:
+            raise
+        data, final_url, content_type = fetch_bytes(
+            download_url,
+            headers={
+                "User-Agent": "Mozilla/5.0 EfemeridesUNALSync/1.0",
+                "Authorization": f"Bearer {tempauth}",
+            },
+        )
+
+    if not data.startswith(b"PK\x03\x04"):
+        raise RuntimeError(
+            f"La URL temporal de OneDrive no devolvió un XLSX válido ({content_type}, {len(data)} bytes)."
+        )
+    output_path.write_bytes(data)
+    return {
+        "method": "onedrive-personal-api",
+        "final_url": final_url,
+        "content_type": content_type,
+        "bytes": len(data),
+        "file_name": item.get("name"),
+    }
+
 def download_xlsx(source_url, output_path):
     parsed = urllib.parse.urlparse(source_url)
     qs = urllib.parse.parse_qsl(parsed.query, keep_blank_values=True)
@@ -285,20 +357,21 @@ def download_xlsx(source_url, output_path):
         qs_dl = qs + [("download", "1")]
         candidates.append(urllib.parse.urlunparse(parsed._replace(query=urllib.parse.urlencode(qs_dl))))
     candidates.append(source_url)
+
     errors = []
     for url in candidates:
         try:
-            req = urllib.request.Request(url, headers={
-                "User-Agent": "Mozilla/5.0 EfemeridesUNALSync/1.0",
-                "Accept": "*/*",
-            })
-            with urllib.request.urlopen(req, timeout=60) as resp:
-                data = resp.read()
-                final_url = resp.geturl()
-                content_type = resp.headers.get("Content-Type", "")
+            data, final_url, content_type = fetch_bytes(
+                url,
+                headers={
+                    "User-Agent": "Mozilla/5.0 EfemeridesUNALSync/1.0",
+                    "Accept": "*/*",
+                },
+            )
             if data.startswith(b"PK\x03\x04"):
                 output_path.write_bytes(data)
                 return {
+                    "method": "direct",
                     "requested_url": url,
                     "final_url": final_url,
                     "content_type": content_type,
@@ -307,6 +380,12 @@ def download_xlsx(source_url, output_path):
             errors.append(f"{url}: respuesta no XLSX ({content_type}, {len(data)} bytes)")
         except Exception as exc:
             errors.append(f"{url}: {exc}")
+
+    try:
+        return download_via_personal_onedrive_api(source_url, output_path)
+    except Exception as exc:
+        errors.append(f"OneDrive Personal API: {exc}")
+
     raise RuntimeError("No se pudo descargar un XLSX válido desde OneDrive. " + " | ".join(errors))
 
 def main():

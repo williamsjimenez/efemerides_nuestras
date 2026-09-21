@@ -1,0 +1,9 @@
+[
+{"source_row_id":3,"entity_name":"Doctorado en Ciencias - Biología","field":"Mes","stored_value":"Diciembre","expected_from_date":"Agosto","severity":"revisar"},
+{"source_row_id":4,"entity_name":"Facultad de Medicina Veterinaria y Zootecnia","field":"Mes","stored_value":"Octubre","expected_from_date":"Mayo","severity":"revisar"},
+{"source_row_id":5,"entity_name":"Medicina Veterinaria","field":"Mes","stored_value":"Octubre","expected_from_date":"Mayo","severity":"revisar"},
+{"source_row_id":133,"entity_name":"Instituto de Estudios en Comunicación y Cultura – IECO","field":"Año","stored_value":1996,"expected_from_date":2026,"severity":"revisar"},
+{"source_row_id":136,"entity_name":"Sede Manizales","field":"Mes","stored_value":"Febrero","expected_from_date":"Marzo","severity":"revisar"},
+{"source_row_id":165,"entity_name":"Sede Caribe","field":"Año","stored_value":1994,"expected_from_date":1997,"severity":"revisar"},
+{"source_row_id":165,"entity_name":"Sede Caribe","field":"Mes","stored_value":"Febrero","expected_from_date":"Enero","severity":"revisar"}
+]

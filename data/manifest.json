@@ -1,1 +1,1 @@
-{"parts":["data/part-001.json"],"note":"Carga inicial funcional. El archivo fuente contiene 167 entidades y 108 hitos; esta primera versión incluye una muestra mientras se completa la migración integral."}
+{"parts":["data/full-001.txt","data/full-002.txt","data/full-003.txt"],"records":167,"dated_events":108,"records_without_date":76,"source":"20260908_Fecha_resolu.xlsx"}

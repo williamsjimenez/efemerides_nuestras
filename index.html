@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Efemérides UNAL</title>
+  <meta name="description" content="Calendario y repositorio documental de efemérides de la Universidad Nacional de Colombia.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Universidad Nacional de Colombia</p>
+      <h1>Efemérides UNAL</h1>
+      <p class="subtitle">Fechas, historia y actos administrativos en un solo repositorio verificable.</p>
+    </div>
+    <button id="downloadIcs" class="button">Descargar calendario .ics</button>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Filtros">
+      <label>Buscar
+        <input id="searchInput" type="search" placeholder="Sede, facultad, programa o acto">
+      </label>
+      <label>Sede
+        <select id="sedeFilter"><option value="">Todas</option></select>
+      </label>
+      <label>Tipo
+        <select id="kindFilter"><option value="">Todos</option></select>
+      </label>
+      <label>Estado documental
+        <select id="statusFilter">
+          <option value="">Todos</option>
+          <option value="con-fuente">Con fuente localizada</option>
+          <option value="con-acto-sin-documento">Con acto, PDF pendiente</option>
+          <option value="pendiente">Información pendiente</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="summary" id="summary"></section>
+
+    <section class="calendar-card">
+      <div class="calendar-toolbar">
+        <button id="prevMonth" class="icon-button" aria-label="Mes anterior">←</button>
+        <div>
+          <h2 id="monthTitle"></h2>
+          <p id="monthSubtitle"></p>
+        </div>
+        <button id="nextMonth" class="icon-button" aria-label="Mes siguiente">→</button>
+      </div>
+      <div class="weekdays" aria-hidden="true">
+        <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+      </div>
+      <div id="calendar" class="calendar"></div>
+    </section>
+
+    <section class="upcoming-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Consulta rápida</p>
+          <h2>Efemérides del mes</h2>
+        </div>
+      </div>
+      <div id="monthList" class="event-list"></div>
+    </section>
+
+    <section class="pending-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Control de calidad</p>
+          <h2>Fechas sin día exacto</h2>
+        </div>
+      </div>
+      <div id="undatedList" class="event-list"></div>
+    </section>
+  </main>
+
+  <dialog id="detailDialog">
+    <button id="closeDialog" class="dialog-close" aria-label="Cerrar">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+
+  <footer>
+    <p>Repositorio de trazabilidad histórica. Cada fecha debe estar respaldada por su fuente administrativa o documental.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

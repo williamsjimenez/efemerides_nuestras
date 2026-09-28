@@ -284,20 +284,17 @@ async function loadData(showFeedback = false) {
   if (showFeedback && status) status.textContent = "Consultando la versión más reciente…";
 
   try {
-    const rawBase = "https://raw.githubusercontent.com/williamsjimenez/efemerides_nuestras/main/";
     const cacheBust = Date.now();
-    const manifest = await fetch(`${rawBase}data/manifest.json?v=${cacheBust}`, {
-      cache: "no-store",
-      headers: { "Cache-Control": "no-cache" }
+    const manifest = await fetch(`data/manifest.json?v=${cacheBust}`, {
+      cache: "no-store"
     }).then(r => {
       if (!r.ok) throw new Error("No se pudo cargar el manifiesto de datos");
       return r.json();
     });
 
     const chunks = await Promise.all(manifest.parts.map(p =>
-      fetch(`${rawBase}${p}?v=${cacheBust}`, {
-        cache: "no-store",
-        headers: { "Cache-Control": "no-cache" }
+      fetch(`${p}?v=${cacheBust}`, {
+        cache: "no-store"
       }).then(r => {
         if (!r.ok) throw new Error(`No se pudo cargar ${p}`);
         return r.text();

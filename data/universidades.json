@@ -1,0 +1,335 @@
+{
+  "meta": {
+    "title": "Efemérides universitarias",
+    "updated": "2026-09-28",
+    "source": "Repositorio_Maestro_Efemerides_Universitarias.xlsx",
+    "records": 25
+  },
+  "institutions": [
+    {
+      "name": "Universidad de Santiago de Chile",
+      "country": "Chile",
+      "foundation_year": 1849,
+      "day": 6,
+      "month": 7,
+      "rectors": {
+        "2026": "Pedro Iván Palominos Belmar",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Tecnológica de Bolívar",
+      "country": "Colombia",
+      "foundation_year": 1970,
+      "day": 5,
+      "month": 8,
+      "rectors": {
+        "2026": "Alicia Bozzi Martínez",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Distrital Francisco José de Caldas",
+      "country": "Colombia",
+      "foundation_year": 1948,
+      "day": 6,
+      "month": 8,
+      "rectors": {
+        "2026": "José Andelfo Lizcano Caro",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidade Federal de Pernambuco",
+      "country": "Brasil",
+      "foundation_year": 1946,
+      "day": 11,
+      "month": 8,
+      "rectors": {
+        "2026": "Alfredo Macedo Gomes",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Buenos Aires",
+      "country": "Argentina",
+      "foundation_year": 1821,
+      "day": 12,
+      "month": 8,
+      "rectors": {
+        "2026": "Ricardo Jorge Gelpi",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Nacional de La Plata",
+      "country": "Argentina",
+      "foundation_year": 1905,
+      "day": 12,
+      "month": 8,
+      "rectors": {
+        "2026": "Fernando Tauber (Presidente)",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Tecnológica Nacional",
+      "country": "Argentina",
+      "foundation_year": 1948,
+      "day": 19,
+      "month": 8,
+      "rectors": {
+        "2026": "Rubén Soro",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Pontifícia Universidade Católica de São Paulo",
+      "country": "Brasil",
+      "foundation_year": 1946,
+      "day": 22,
+      "month": 8,
+      "rectors": {
+        "2026": "Vidal Serrano Nunes Júnior",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Argentina de la Empresa",
+      "country": "Argentina",
+      "foundation_year": 1963,
+      "day": 27,
+      "month": 8,
+      "rectors": {
+        "2026": "Ricardo Orosco",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Ibagué",
+      "country": "Colombia",
+      "foundation_year": 1980,
+      "day": 27,
+      "month": 8,
+      "rectors": {
+        "2026": "Natalia Ruiz Rodgers",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Tecnológico de Monterrey",
+      "country": "México",
+      "foundation_year": 1943,
+      "day": 6,
+      "month": 9,
+      "rectors": {
+        "2026": "David Garza Salazar (Presidente Ejecutivo)",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Instituto universitario"
+    },
+    {
+      "name": "Universidad Austral de Chile",
+      "country": "Chile",
+      "foundation_year": 1954,
+      "day": 7,
+      "month": 9,
+      "rectors": {
+        "2026": "Egon Montecinos Montecinos",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidade Federal de Minas Gerais",
+      "country": "Brasil",
+      "foundation_year": 1927,
+      "day": 7,
+      "month": 9,
+      "rectors": {
+        "2026": "Alessandro Fernandes Moreira",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidade Federal do Rio de Janeiro",
+      "country": "Brasil",
+      "foundation_year": 1920,
+      "day": 7,
+      "month": 9,
+      "rectors": {
+        "2026": "Roberto de Andrade Medronho",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de los Andes (Chile)",
+      "country": "Chile",
+      "foundation_year": 1989,
+      "day": 8,
+      "month": 9,
+      "rectors": {
+        "2026": "José Antonio Guzmán Cruzat",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Belgrano",
+      "country": "Argentina",
+      "foundation_year": 1964,
+      "day": 11,
+      "month": 9,
+      "rectors": {
+        "2026": "José Luis Ghioldi (Presidente)",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Unión de Universidades de América Latina y el Caribe – UDUALC",
+      "country": "Regional",
+      "foundation_year": 1949,
+      "day": 22,
+      "month": 9,
+      "rectors": {
+        "2026": "Jorge Calzoni (Presidente)",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Unión universitaria"
+    },
+    {
+      "name": "Universidad Nacional Autónoma de México",
+      "country": "México",
+      "foundation_year": 1910,
+      "day": 22,
+      "month": 9,
+      "rectors": {
+        "2026": "Leonardo Lomelí Vanegas",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Autónoma de Nuevo León",
+      "country": "México",
+      "foundation_year": 1933,
+      "day": 25,
+      "month": 9,
+      "rectors": {
+        "2026": "Santos Guzmán López",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Adolfo Ibáñez",
+      "country": "Chile",
+      "foundation_year": 1988,
+      "day": 29,
+      "month": 9,
+      "rectors": {
+        "2026": "Francisco Covarrubias",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Diego Portales",
+      "country": "Chile",
+      "foundation_year": 1982,
+      "day": 4,
+      "month": 10,
+      "rectors": {
+        "2026": "Carlos Peña",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Andrés Bello",
+      "country": "Chile",
+      "foundation_year": 1988,
+      "day": 24,
+      "month": 10,
+      "rectors": {
+        "2026": "Julio Castro Sepúlveda",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Pontifícia Universidade Católica do Rio de Janeiro",
+      "country": "Brasil",
+      "foundation_year": 1940,
+      "day": 30,
+      "month": 10,
+      "rectors": {
+        "2026": "Anderson Antonio Pedroso, S.J.",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Pontifícia Universidade Católica do Rio Grande do Sul",
+      "country": "Brasil",
+      "foundation_year": 1948,
+      "day": 9,
+      "month": 11,
+      "rectors": {
+        "2026": "Manuir José Mentges",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Instituto Tecnológico de Buenos Aires",
+      "country": "Argentina",
+      "foundation_year": 1959,
+      "day": 20,
+      "month": 11,
+      "rectors": {
+        "2026": "Martín Pérez de Solay",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Instituto universitario"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Efemérides universitarias</title>
+  <meta name="description" content="Calendario de aniversarios y fechas fundacionales de universidades de América Latina.">
+  <link rel="stylesheet" href="universidades.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Universidad Nacional de Colombia · Rectoría</p>
+      <h1>Efemérides universitarias</h1>
+      <p class="subtitle">Calendario de fechas fundacionales para el relacionamiento entre comunidades académicas.</p>
+    </div>
+    <div class="header-actions">
+      <a class="button ghost" href="index.html">Efemérides UNAL</a>
+      <button id="downloadIcs" class="button">Descargar calendario .ics</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="stats" aria-label="Resumen">
+      <article><strong id="statInstitutions">—</strong><span>instituciones</span></article>
+      <article><strong id="statCountries">—</strong><span>países / ámbitos</span></article>
+      <article><strong id="statMonth">—</strong><span>efemérides este mes</span></article>
+      <article><strong id="statNext">—</strong><span>próxima efeméride</span></article>
+    </section>
+
+    <section class="controls" aria-label="Filtros">
+      <label>Buscar
+        <input id="searchInput" type="search" placeholder="Universidad, país o rector">
+      </label>
+      <label>País
+        <select id="countryFilter"><option value="">Todos</option></select>
+      </label>
+      <label>Tipo
+        <select id="typeFilter"><option value="">Todos</option></select>
+      </label>
+    </section>
+
+    <section class="calendar-card">
+      <div class="calendar-toolbar">
+        <button id="prevMonth" class="icon-button" aria-label="Mes anterior">←</button>
+        <div>
+          <h2 id="monthTitle"></h2>
+          <p id="monthSubtitle"></p>
+        </div>
+        <button id="nextMonth" class="icon-button" aria-label="Mes siguiente">→</button>
+      </div>
+      <div class="weekdays" aria-hidden="true">
+        <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+      </div>
+      <div id="calendar" class="calendar"></div>
+    </section>
+
+    <section class="list-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Consulta rápida</p>
+          <h2>Efemérides del mes</h2>
+        </div>
+      </div>
+      <div id="monthList" class="event-list"></div>
+    </section>
+  </main>
+
+  <dialog id="detailDialog">
+    <button id="closeDialog" class="dialog-close" aria-label="Cerrar">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+
+  <footer>
+    <p>Fuente maestra: Repositorio_Maestro_Efemerides_Universitarias.xlsx. Las fechas corresponden al día y mes de fundación registrados en el repositorio.</p>
+  </footer>
+
+  <script src="universidades.js"></script>
+</body>
+</html>

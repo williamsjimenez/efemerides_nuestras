@@ -1,0 +1,1313 @@
+{
+  "meta": {
+    "title": "Efemérides científicas, académicas y culturales",
+    "source": "https://1drv.ms/x/c/f0437e1066d439c2/IQAG-oAXUhAgR6GLr-icPyUEAV8yn94El0QRd_kLoOFteuE?e=D0fVWv",
+    "records": 129,
+    "dated_records": 112,
+    "variable_date_records": 2,
+    "undated_records": 15
+  },
+  "events": [
+    {
+      "id": "sci-1",
+      "name": "Dia Internacional de la Paz y los Derechos Humanos",
+      "description": "ONU. Marco para reflexión sobre educación en valores, ciudadanía y derechos humanos.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 2,
+      "day": 1,
+      "month": 1
+    },
+    {
+      "id": "sci-2",
+      "name": "Natalicio de Isaac Newton (1643)",
+      "description": "Matemático, físico y astrónomo inglés. Formulo las leyes del movimiento, la gravitación universal y el cálculo diferencial.",
+      "category": "Ciencia y tecnología",
+      "year": 1643,
+      "source_row": 3,
+      "day": 4,
+      "month": 1
+    },
+    {
+      "id": "sci-3",
+      "name": "Natalicio de Gregory Mendel (1822)",
+      "description": "Monje agustino y botánico checo, fundador de la genética moderna. Sus experimentos con guisantes establecieron las bases de la herencia biológica.",
+      "category": "Ciencia y tecnología",
+      "year": 1822,
+      "source_row": 4,
+      "day": 6,
+      "month": 1
+    },
+    {
+      "id": "sci-4",
+      "name": "Natalicio de Stephen Hawking (1942)",
+      "description": "Físico teórico británico. Referente mundial en cosmología, agujeros negros y divulgación científica.",
+      "category": "Ciencia y tecnología",
+      "year": 1942,
+      "source_row": 5,
+      "day": 8,
+      "month": 1
+    },
+    {
+      "id": "sci-5",
+      "name": "Fallecimiento de Galileo Galilei (1642)",
+      "description": "Astrónomo y físico italiano, padre de la ciencia moderna y del método científico experimental.",
+      "category": "Ciencia y tecnología",
+      "year": 1642,
+      "source_row": 6,
+      "day": 14,
+      "month": 1
+    },
+    {
+      "id": "sci-6",
+      "name": "Dia Internacional de la Educación",
+      "description": "Proclamado por la ONU en 2018 para celebrar el papel de la educación en la paz y el desarrollo sostenible.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 7,
+      "day": 24,
+      "month": 1
+    },
+    {
+      "id": "sci-7",
+      "name": "Dia Internacional en Memoria de las Víctimas del Holocausto",
+      "description": "ONU. Conmemoración del genocidio nazi. Referente para historia, derechos humanos y memoria colectiva.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 8,
+      "day": 27,
+      "month": 1
+    },
+    {
+      "id": "sci-8",
+      "name": "Natalicio de Lewis Carroll (1832)",
+      "description": "Matemático y escritor británico, autor de Alicia en el País de las Maravillas. Referente para matemáticas recreativas y literatura.",
+      "category": "Humanidades y letras",
+      "year": 1832,
+      "source_row": 9,
+      "day": 27,
+      "month": 1
+    },
+    {
+      "id": "sci-9",
+      "name": "Dia Mundial contra el Cáncer",
+      "description": "OMS/UICC. Marco para investigación oncológica, bienestar universitario y salud pública.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 10,
+      "day": 4,
+      "month": 2
+    },
+    {
+      "id": "sci-10",
+      "name": "Aniversario de la Constitución Política de Colombia (1991, referencia)",
+      "description": "La Constitución de 1991 es referente académico central para derecho, ciencias políticas e historia constitucional colombiana.",
+      "category": "Fechas nacionales de Colombia",
+      "year": null,
+      "source_row": 11,
+      "day": 7,
+      "month": 2
+    },
+    {
+      "id": "sci-11",
+      "name": "Dia Internacional de la Mujer y la Nina en la Ciencia",
+      "description": "ONU, 2015. Promueve el acceso pleno e igualitario de mujeres en ciencia y tecnología.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 12,
+      "day": 11,
+      "month": 2
+    },
+    {
+      "id": "sci-12",
+      "name": "Natalicio de Charles Darwin (1809)",
+      "description": "Naturalista británico que formulo la teoría de la evolución por selección natural. Piedra angular de la biología moderna.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 13,
+      "day": 12,
+      "month": 2
+    },
+    {
+      "id": "sci-13",
+      "name": "Dia Mundial de la Radio",
+      "description": "UNESCO, 2011. Relevante para comunicación social, periodismo y medios universitarios.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 14,
+      "day": 13,
+      "month": 2
+    },
+    {
+      "id": "sci-14",
+      "name": "Natalicio de Francisco José de Caldas (1768)",
+      "description": "Naturalista, astrónomo y geógrafo colombiano, mártir de la Independencia. Considerado el primer científico colombiano.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 15,
+      "day": 15,
+      "month": 2
+    },
+    {
+      "id": "sci-15",
+      "name": "Natalicio de Galileo Galilei (1564)",
+      "description": "Astrónomo, físico y matemático italiano. Pionero del método científico moderno, defendió el heliocentrismo de Copérnico.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 16,
+      "day": 15,
+      "month": 2
+    },
+    {
+      "id": "sci-16",
+      "name": "Dia Mundial de la Justicia Social",
+      "description": "ONU. Marco para sociología, trabajo social, derecho y políticas de inclusión.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 17,
+      "day": 20,
+      "month": 2
+    },
+    {
+      "id": "sci-17",
+      "name": "Dia Internacional de la Lengua Materna",
+      "description": "UNESCO, 1999. Promueve la diversidad lingüística, la multiculturalidad y la educación plurilingüe.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 18,
+      "day": 21,
+      "month": 2
+    },
+    {
+      "id": "sci-18",
+      "name": "Natalicio de Heinrich Rudolf Hertz (1857)",
+      "description": "Físico alemán que demostró la existencia de las ondas electromagnéticas. La unidad de frecuencia lleva su nombre.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 19,
+      "day": 22,
+      "month": 2
+    },
+    {
+      "id": "sci-19",
+      "name": "Dia Mundial de las Enfermedades Raras",
+      "description": "Marco para investigación biomédica, políticas de salud y bienestar universitario.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 20,
+      "day": 28,
+      "month": 2
+    },
+    {
+      "id": "sci-20",
+      "name": "Dia Internacional de la Mujer",
+      "description": "Reconocimiento de las luchas históricas por la igualdad de género en academia, investigación y vida pública.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 21,
+      "day": 8,
+      "month": 3
+    },
+    {
+      "id": "sci-21",
+      "name": "Dia de Pi (3.14)",
+      "description": "Celebración matemática internacional del número pi. Ampliamente conmemorado en facultades de ciencias exactas e ingenierías.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 22,
+      "day": 14,
+      "month": 3
+    },
+    {
+      "id": "sci-22",
+      "name": "Natalicio de Albert Einstein (1879)",
+      "description": "Físico teórico alemán, autor de la teoría de la relatividad especial y general. Premio Nobel de Física 1921.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 23,
+      "day": 14,
+      "month": 3
+    },
+    {
+      "id": "sci-23",
+      "name": "Dia del Matemático en Colombia",
+      "description": "Conmemoración institucional. La UNAL y otras universidades colombianas realizan eventos, conferencias y olimpiadas de matemáticas.",
+      "category": "Fechas académicas de Colombia",
+      "year": null,
+      "source_row": 24,
+      "day": 15,
+      "month": 3
+    },
+    {
+      "id": "sci-24",
+      "name": "Dia Internacional de la Francofonía",
+      "description": "Celebración lingüística con impacto en programas de francés y cooperación académica internacional.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 25,
+      "day": 20,
+      "month": 3
+    },
+    {
+      "id": "sci-25",
+      "name": "Dia Internacional de la Eliminación de la Discriminación Racial",
+      "description": "ONU. Marco para cátedras sobre derechos humanos, diversidad étnica, racismo y política social.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 26,
+      "day": 21,
+      "month": 3
+    },
+    {
+      "id": "sci-26",
+      "name": "Natalicio de Johann Sebastián Bach (1685)",
+      "description": "Compositor alemán del Barroco. Referente central para estudios de musicología e historia de la música.",
+      "category": "Humanidades y letras",
+      "year": null,
+      "source_row": 27,
+      "day": 21,
+      "month": 3
+    },
+    {
+      "id": "sci-27",
+      "name": "Dia Mundial del Agua",
+      "description": "ONU. Relevante para ingenierías ambientales, ciencias de la tierra y políticas públicas de gestión hídrica.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 28,
+      "day": 22,
+      "month": 3
+    },
+    {
+      "id": "sci-28",
+      "name": "Natalicio de Rene Descartes (1596)",
+      "description": "Filósofo y matemático francés, padre del racionalismo moderno y creador de la geometría analítica.",
+      "category": "Humanidades y letras",
+      "year": null,
+      "source_row": 29,
+      "day": 31,
+      "month": 3
+    },
+    {
+      "id": "sci-29",
+      "name": "Dia Mundial del Autismo",
+      "description": "ONU. Marco para programas de Inclusion educativa, psicología del desarrollo y salud mental universitaria.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 30,
+      "day": 2,
+      "month": 4
+    },
+    {
+      "id": "sci-30",
+      "name": "Dia Mundial de la Salud",
+      "description": "OMS. Relevante para facultades de medicina, salud pública y ciencias de la salud.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 31,
+      "day": 7,
+      "month": 4
+    },
+    {
+      "id": "sci-31",
+      "name": "Natalicio de Leonardo da Vinci (1452)",
+      "description": "Artista, científico e inventor renacentista italiano. Símbolo de la interdisciplinariedad del conocimiento.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 32,
+      "day": 15,
+      "month": 4
+    },
+    {
+      "id": "sci-33",
+      "name": "Dia de la Tierra",
+      "description": "Fundado en 1970. Eje de eventos académicos sobre sostenibilidad, ecología y cambio climático.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 34,
+      "day": 22,
+      "month": 4
+    },
+    {
+      "id": "sci-32",
+      "name": "Natalicio de Immanuel Kant (1724)",
+      "description": "Filosofo alemán, figura central de la filosofía moderna. Autor de la Crítica de la Razón Pura.",
+      "category": "Humanidades y letras",
+      "year": null,
+      "source_row": 33,
+      "day": 22,
+      "month": 4
+    },
+    {
+      "id": "sci-34",
+      "name": "Dia Mundial del Libro y del Derecho de Autor",
+      "description": "UNESCO. Fecha del fallecimiento de Cervantes y Shakespeare (1616). Celebración en universidades y bibliotecas.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 35,
+      "day": 23,
+      "month": 4
+    },
+    {
+      "id": "sci-36",
+      "name": "Dia Mundial de la Propiedad Intelectual",
+      "description": "OMPI. Relevante para derecho, investigación aplicada y gestión del conocimiento universitario.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 37,
+      "day": 26,
+      "month": 4
+    },
+    {
+      "id": "sci-37",
+      "name": "Natalicio de Herbert Spencer (1820)",
+      "description": "Filósofo y sociólogo británico. Referente para sociología, filosofía social y ciencias del comportamiento.",
+      "category": "Humanidades y letras",
+      "year": null,
+      "source_row": 38,
+      "day": 27,
+      "month": 4
+    },
+    {
+      "id": "sci-38",
+      "name": "Dia Mundial de la Libertad de Prensa",
+      "description": "UNESCO. Fundamental para facultades de periodismo, comunicación social y estudios de medios.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 39,
+      "day": 3,
+      "month": 5
+    },
+    {
+      "id": "sci-39",
+      "name": "Natalicio de Karl Marx (1818)",
+      "description": "Filosofo, economista y sociólogo alemán. Fundador del marxismo, referente central en ciencias sociales, historia y economía.",
+      "category": "Humanidades y letras",
+      "year": null,
+      "source_row": 40,
+      "day": 5,
+      "month": 5
+    },
+    {
+      "id": "sci-40",
+      "name": "Natalicio de Sigmund Freud (1856)",
+      "description": "Neurólogo austriaco, fundador del psicoanálisis. Referente para psicología, psiquiatría y humanidades.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 41,
+      "day": 6,
+      "month": 5
+    },
+    {
+      "id": "sci-41",
+      "name": "Dia Internacional de la Familia",
+      "description": "ONU. Marco para estudios de sociología, trabajo social y política pública.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 42,
+      "day": 15,
+      "month": 5
+    },
+    {
+      "id": "sci-42",
+      "name": "Natalicio de Pierre Curie (1859)",
+      "description": "Físico francés, pionero en investigación sobre radioactividad junto a Marie Curie.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 43,
+      "day": 15,
+      "month": 5
+    },
+    {
+      "id": "sci-43",
+      "name": "Dia Internacional de la Luz",
+      "description": "UNESCO. Conmemoración del primer laser (1960). Relevante para física, óptica, fotónica y ciencias aplicadas.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 44,
+      "day": 16,
+      "month": 5
+    },
+    {
+      "id": "sci-44",
+      "name": "Dia Mundial de las Telecomunicaciones y la Sociedad de la Información",
+      "description": "UIT. Referencia para ingenierías de sistemas, ciencias de la información y transformación digital.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 45,
+      "day": 17,
+      "month": 5
+    },
+    {
+      "id": "sci-45",
+      "name": "Dia Internacional de los Museos",
+      "description": "ICOM. Relevante para historia del arte, patrimonio cultural y museología.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 46,
+      "day": 18,
+      "month": 5
+    },
+    {
+      "id": "sci-46",
+      "name": "Dia Internacional de la Diversidad Biológica",
+      "description": "ONU. Eje para biología, ecología, ciencias forestales y política ambiental.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 47,
+      "day": 22,
+      "month": 5
+    },
+    {
+      "id": "sci-47",
+      "name": "Natalicio de Arthur Conan Doyle (1859)",
+      "description": "Escritor escoces, creador de Sherlock Holmes. Referente para criminología literaria y lógica deductiva.",
+      "category": "Humanidades y letras",
+      "year": null,
+      "source_row": 48,
+      "day": 22,
+      "month": 5
+    },
+    {
+      "id": "sci-49",
+      "name": "Natalicio de Niels Bohr (1885)",
+      "description": "Físico danés, pionero de la mecánica cuántica y modelo atómico. Premio Nobel de Física 1922.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 50,
+      "day": 1,
+      "month": 6
+    },
+    {
+      "id": "sci-50",
+      "name": "Dia Mundial del Medio Ambiente",
+      "description": "PNUMA, 1972. Una de las principales plataformas globales para acción ambiental en academia e instituciones.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 51,
+      "day": 5,
+      "month": 6
+    },
+    {
+      "id": "sci-51",
+      "name": "Dia del Maestro en Colombia",
+      "description": "Celebración nacional del docente colombiano. Conmemoración institucional en todas las universidades del país.",
+      "category": "Fechas académicas de Colombia",
+      "year": null,
+      "source_row": 52,
+      "day": 15,
+      "month": 6
+    },
+    {
+      "id": "sci-52",
+      "name": "Natalicio de Blaise Pascal (1623)",
+      "description": "Matemático, físico y filosofo francés. Pionero en teoría de probabilidades y precursor de la computación.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 53,
+      "day": 19,
+      "month": 6
+    },
+    {
+      "id": "sci-53",
+      "name": "Dia Nacional de las Lenguas Nativas en Colombia",
+      "description": "Reconocimiento de las lenguas indígenas del país. Relevante para lingüística, etnología y política cultural.",
+      "category": "Fechas nacionales de Colombia",
+      "year": null,
+      "source_row": 54,
+      "day": 21,
+      "month": 6
+    },
+    {
+      "id": "sci-54",
+      "name": "Natalicio de Alan Turing (1912)",
+      "description": "Matemático e informático británico, padre de la computación moderna y la inteligencia artificial.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 55,
+      "day": 23,
+      "month": 6
+    },
+    {
+      "id": "sci-55",
+      "name": "Dia Internacional contra el Uso Indebido y el Trafico Ilícito de Drogas",
+      "description": "ONU. Marco para criminología, salud pública, política criminal y estudios sobre narcotráfico.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 56,
+      "day": 26,
+      "month": 6
+    },
+    {
+      "id": "sci-56",
+      "name": "Natalicio de Marie Curie (1867)",
+      "description": "Física y química polaco-francesa. Primera mujer en recibir el Premio Nobel y única en dos disciplinas (Física 1903, Química 1911).",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 57,
+      "day": 4,
+      "month": 7
+    },
+    {
+      "id": "sci-57",
+      "name": "Natalicio de Camilo Torres Restrepo (1929)",
+      "description": "Sociólogo y sacerdote colombiano, pionero de la sociología latinoamericana. Figura del pensamiento crítico y la teología de la liberación.",
+      "category": "Humanidades y letras",
+      "year": null,
+      "source_row": 58,
+      "day": 7,
+      "month": 7
+    },
+    {
+      "id": "sci-58",
+      "name": "Natalicio de Nikola Tesla (1856)",
+      "description": "Inventor e ingeniero serbocroata. Pionero en corriente alterna, electromagnetismo y sistemas eléctricos modernos.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 59,
+      "day": 10,
+      "month": 7
+    },
+    {
+      "id": "sci-59",
+      "name": "Dia Mundial de la Población",
+      "description": "ONU. Marco para demografía, salud reproductiva, sociología y política pública.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 60,
+      "day": 11,
+      "month": 7
+    },
+    {
+      "id": "sci-60",
+      "name": "Dia de la Independencia de Colombia",
+      "description": "Conmemoración del 20 de julio de 1810. Las universidades colombianas realizan actos académicos de reflexión histórica y cívica.",
+      "category": "Fechas nacionales de Colombia",
+      "year": null,
+      "source_row": 61,
+      "day": 20,
+      "month": 7
+    },
+    {
+      "id": "sci-61",
+      "name": "Natalicio de Carl Jung (1875)",
+      "description": "Psiquiatra y psicólogo suizo, fundador de la psicología analítica. Referente para psicología, humanidades y ciencias sociales.",
+      "category": "Humanidades y letras",
+      "year": null,
+      "source_row": 62,
+      "day": 26,
+      "month": 7
+    },
+    {
+      "id": "sci-62",
+      "name": "Dia Mundial contra la Trata de Personas",
+      "description": "ONU. Central para criminología, derechos humanos, trabajo social y política criminal.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 63,
+      "day": 30,
+      "month": 7
+    },
+    {
+      "id": "sci-63",
+      "name": "Natalicio de Alexander Fleming (1881)",
+      "description": "Microbiólogo escoces descubridor de la penicilina. Premio Nobel de Medicina 1945. Hito de la farmacología y microbiología.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 64,
+      "day": 6,
+      "month": 8
+    },
+    {
+      "id": "sci-64",
+      "name": "Batalla de Boyacá (1819)",
+      "description": "Consolidación de la Independencia de Colombia. Referencia académica central para historia, ciencias políticas y estudios latinoamericanos.",
+      "category": "Fechas nacionales de Colombia",
+      "year": null,
+      "source_row": 65,
+      "day": 7,
+      "month": 8
+    },
+    {
+      "id": "sci-65",
+      "name": "Dia Internacional de los Pueblos Indígenas",
+      "description": "ONU, 1994. Marco para estudios de derechos étnicos, antropología y política multicultural.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 66,
+      "day": 9,
+      "month": 8
+    },
+    {
+      "id": "sci-67",
+      "name": "Dia Internacional de la Juventud",
+      "description": "ONU. Referencia para políticas universitarias de bienestar, participación estudiantil y política social de juventudes.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 68,
+      "day": 12,
+      "month": 8
+    },
+    {
+      "id": "sci-66",
+      "name": "Natalicio de Erwin Schrodinger (1887)",
+      "description": "Físico austriaco, uno de los fundadores de la mecánica cuántica. Premio Nobel de Física 1933.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 67,
+      "day": 12,
+      "month": 8
+    },
+    {
+      "id": "sci-68",
+      "name": "Dia Mundial de la Fotografía",
+      "description": "Conmemoración del daguerrotipo (1839). Relevante para comunicación visual, artes y documentación científica.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 69,
+      "day": 19,
+      "month": 8
+    },
+    {
+      "id": "sci-69",
+      "name": "Natalicio de Jorge Isaac (1837)",
+      "description": "Escritor y político colombiano, autor de Maria. Figura central de la literatura romántica latinoamericana.",
+      "category": "Humanidades y letras",
+      "year": null,
+      "source_row": 70,
+      "day": 24,
+      "month": 8
+    },
+    {
+      "id": "sci-70",
+      "name": "Natalicio de Johann Wolfgang von Goethe (1749)",
+      "description": "Escritor, poeta y científico alemán. Figura cumbre de la literatura universal y el pensamiento ilustrado.",
+      "category": "Humanidades y letras",
+      "year": null,
+      "source_row": 71,
+      "day": 28,
+      "month": 8
+    },
+    {
+      "id": "sci-71",
+      "name": "Dia Internacional de las Victimas de Desapariciones Forzadas",
+      "description": "ONU. Marco para derechos humanos, criminología, memoria histórica y política publica en Colombia y América Latina.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 72,
+      "day": 30,
+      "month": 8
+    },
+    {
+      "id": "sci-72",
+      "name": "Dia Internacional de la Alfabetización",
+      "description": "UNESCO, 1966. Central para educación, pedagogía y política educativa global.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 73,
+      "day": 8,
+      "month": 9
+    },
+    {
+      "id": "sci-73",
+      "name": "Natalicio de Leo Tolstoi (1828)",
+      "description": "Novelista ruso, autor de Guerra y Paz y Anna Karenina. Referente de la literatura universal.",
+      "category": "Humanidades y letras",
+      "year": null,
+      "source_row": 74,
+      "day": 9,
+      "month": 9
+    },
+    {
+      "id": "sci-74",
+      "name": "Natalicio de Irene Joliot-Curie (1897)",
+      "description": "Física y química francesa, hija de Marie Curie. Premio Nobel de Química 1935.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 75,
+      "day": 12,
+      "month": 9
+    },
+    {
+      "id": "sci-75",
+      "name": "Natalicio de Alexander von Humboldt (1769)",
+      "description": "Naturalista y geógrafo prusiano que exploro ampliamente Colombia y América del Sur. Padre de la geografía moderna.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 76,
+      "day": 14,
+      "month": 9
+    },
+    {
+      "id": "sci-76",
+      "name": "Dia Internacional de la Democracia",
+      "description": "ONU. Relevante para ciencias políticas, derecho constitucional y estudios de gobernanza.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 77,
+      "day": 15,
+      "month": 9
+    },
+    {
+      "id": "sci-77",
+      "name": "Fundación de la Universidad del Cauca (1827)",
+      "description": "Creada por Francisco de Paula Santander. Una de las universidades públicas más antiguas de Colombia.",
+      "category": "Instituciones académicas de Colombia",
+      "year": null,
+      "source_row": 78,
+      "day": 19,
+      "month": 9
+    },
+    {
+      "id": "sci-78",
+      "name": "Dia Internacional de la Paz",
+      "description": "ONU. Marco para relaciones internacionales, estudios de paz y conflicto armado.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 79,
+      "day": 21,
+      "month": 9
+    },
+    {
+      "id": "sci-114",
+      "name": "Fundación Universidad Nacional de Colombia",
+      "description": "Creada por la Ley 66 del 22 de septiembre de 1867. Principal universidad pública del país y referente de la educación superior colombiana.",
+      "category": "Insitucional UNAL - Creación",
+      "year": 1867,
+      "source_row": 115,
+      "day": 22,
+      "month": 9
+    },
+    {
+      "id": "sci-79",
+      "name": "Natalicio de Michael Faraday (1791)",
+      "description": "Físico y químico inglés, pionero del electromagnetismo y la inducción electromagnética.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 80,
+      "day": 22,
+      "month": 9
+    },
+    {
+      "id": "sci-80",
+      "name": "Dia Mundial para la Prevención del Suicidio",
+      "description": "OMS/IASP. Marco para salud mental, psicología clínica y bienestar universitario.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 81,
+      "day": 26,
+      "month": 9
+    },
+    {
+      "id": "sci-82",
+      "name": "Dia del Idioma Español",
+      "description": "Celebración del español como lengua global. Activa en departamentos de lingüística, literatura y humanidades.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 83,
+      "day": 28,
+      "month": 9
+    },
+    {
+      "id": "sci-81",
+      "name": "Dia Internacional del Derecho a Saber",
+      "description": "ONU. Referente para derecho, transparencia, acceso a la información publica y políticas de gobierno abierto.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 82,
+      "day": 28,
+      "month": 9
+    },
+    {
+      "id": "sci-83",
+      "name": "Dia Internacional de las Personas Mayores",
+      "description": "ONU. Marco para gerontología, salud pública y política social.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 84,
+      "day": 1,
+      "month": 10
+    },
+    {
+      "id": "sci-84",
+      "name": "Dia Mundial del Docente",
+      "description": "UNESCO, 1994. Conmemoración global del rol del profesor en el desarrollo humano y la construcción del conocimiento.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 85,
+      "day": 5,
+      "month": 10
+    },
+    {
+      "id": "sci-86",
+      "name": "Dia Mundial de la Salud Mental",
+      "description": "OMS. Referencia para programas de bienestar universitario, psicología clínica y salud pública.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 87,
+      "day": 10,
+      "month": 10
+    },
+    {
+      "id": "sci-87",
+      "name": "Dia Internacional de la Nina",
+      "description": "ONU. Marco para políticas de género, educación femenina y derechos de la infancia.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 88,
+      "day": 11,
+      "month": 10
+    },
+    {
+      "id": "sci-88",
+      "name": "Dia de la Diversidad Étnica y Cultural en Colombia",
+      "description": "Reconfigurado como reconocimiento a la plurietnicidad colombiana. Central para estudios afrodescendientes, indígenas y política multicultural.",
+      "category": "Fechas nacionales de Colombia",
+      "year": null,
+      "source_row": 89,
+      "day": 12,
+      "month": 10
+    },
+    {
+      "id": "sci-90",
+      "name": "Dia Mundial de las Mujeres Rurales",
+      "description": "ONU. Marco para estudios de género, desarrollo rural y políticas agropecuarias.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 91,
+      "day": 15,
+      "month": 10
+    },
+    {
+      "id": "sci-89",
+      "name": "Natalicio de Evangelista Torricelli (1608)",
+      "description": "Físico y matemático italiano, inventor del barómetro. Referente para historia de la física y las ciencias exactas.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 90,
+      "day": 15,
+      "month": 10
+    },
+    {
+      "id": "sci-91",
+      "name": "Dia Mundial de la Alimentación",
+      "description": "FAO, 1945. Referente para nutrición, agronomía y política de seguridad alimentaria.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 92,
+      "day": 16,
+      "month": 10
+    },
+    {
+      "id": "sci-93",
+      "name": "Dia Internacional para la Erradicación de la Pobreza",
+      "description": "ONU. Marco para economía del desarrollo, trabajo social y política pública.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 94,
+      "day": 17,
+      "month": 10
+    },
+    {
+      "id": "sci-92",
+      "name": "Natalicio de Rita Levi-Montalcini (1909)",
+      "description": "Neuróloga italiana, Premio Nobel de Medicina 1986. Referente para neurociencias e investigación biomédica.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 93,
+      "day": 17,
+      "month": 10
+    },
+    {
+      "id": "sci-94",
+      "name": "Dia Internacional para Acabar con la Impunidad de Crímenes contra Periodistas",
+      "description": "UNESCO. Relevante para comunicación, derechos humanos y criminología.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 95,
+      "day": 2,
+      "month": 11
+    },
+    {
+      "id": "sci-115",
+      "name": "Fundación de la Universidad de Antioquia",
+      "description": "Creada el 2 de noviembre de 1803 bajo el nombre Colegio Provincial de Antioquia. Una de las más antiguas de Colombia.",
+      "category": "Instituciones academicas Colombia - Creación",
+      "year": 1803,
+      "source_row": 116,
+      "day": 2,
+      "month": 11
+    },
+    {
+      "id": "sci-95",
+      "name": "Dia Internacional para la Prevención de la Explotación del Medio Ambiente en la Guerra",
+      "description": "ONU. Marco para derecho internacional, ecología política y estudios de conflicto.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 96,
+      "day": 6,
+      "month": 11
+    },
+    {
+      "id": "sci-96",
+      "name": "Natalicio de Carl Sagan (1934)",
+      "description": "Astrónomo y divulgador científico estadounidense. Referente para astronomía, filosofía de la ciencia y comunicación pública del conocimiento.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 97,
+      "day": 9,
+      "month": 11
+    },
+    {
+      "id": "sci-98",
+      "name": "Aniversario del Armisticio de 1918",
+      "description": "Fin de la Primera Guerra Mundial. Referente para historia, relaciones internacionales y estudios de paz y conflicto.",
+      "category": "Hitos históricos de la ciencia",
+      "year": null,
+      "source_row": 99,
+      "day": 11,
+      "month": 11
+    },
+    {
+      "id": "sci-97",
+      "name": "Natalicio de Fiador Dostoievski (1821)",
+      "description": "Novelista ruso, autor de Crimen y Castigo. Referente de la literatura universal y la filosofía existencial.",
+      "category": "Humanidades y letras",
+      "year": null,
+      "source_row": 98,
+      "day": 11,
+      "month": 11
+    },
+    {
+      "id": "sci-99",
+      "name": "Fundación de la Universidad de los Andes (1948)",
+      "description": "Fundada el 16 de noviembre de 1948 en Bogotá por Mario Laserna Pinzón. Una de las principales universidades privadas de Colombia.",
+      "category": "Instituciones académicas de Colombia",
+      "year": null,
+      "source_row": 100,
+      "day": 16,
+      "month": 11
+    },
+    {
+      "id": "sci-100",
+      "name": "Dia Internacional del Inodoro",
+      "description": "ONU. Vinculado a ingeniería sanitaria, salud pública y desarrollo sostenible.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 101,
+      "day": 19,
+      "month": 11
+    },
+    {
+      "id": "sci-101",
+      "name": "Dia Universal del Nino",
+      "description": "UNICEF. Marco para pediatría, psicología del desarrollo, educación y política publica de infancia.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 102,
+      "day": 20,
+      "month": 11
+    },
+    {
+      "id": "sci-102",
+      "name": "Dia Internacional de la Eliminación de la Violencia contra la Mujer",
+      "description": "ONU. Central para estudios de género, criminología, trabajo social y derecho.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 103,
+      "day": 25,
+      "month": 11
+    },
+    {
+      "id": "sci-103",
+      "name": "Natalicio de Mark Twain (1835)",
+      "description": "Escritor estadounidense, autor de Las aventuras de Tom Sawyer y Huckleberry Finn. Referente de la literatura norteamericana.",
+      "category": "Humanidades y letras",
+      "year": null,
+      "source_row": 104,
+      "day": 30,
+      "month": 11
+    },
+    {
+      "id": "sci-104",
+      "name": "Dia Mundial del SIDA",
+      "description": "OMS, 1988. Eje para salud pública, medicina, bienestar universitario e investigación epidemiológica.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 105,
+      "day": 1,
+      "month": 12
+    },
+    {
+      "id": "sci-105",
+      "name": "Dia Internacional de las Personas con Discapacidad",
+      "description": "ONU. Marco para Inclusion educativa, accesibilidad y política universitaria.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 106,
+      "day": 3,
+      "month": 12
+    },
+    {
+      "id": "sci-106",
+      "name": "Natalicio de Werner Heisenberg (1901)",
+      "description": "Físico alemán, formulador del principio de incertidumbre. Premio Nobel de Física 1932.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 107,
+      "day": 5,
+      "month": 12
+    },
+    {
+      "id": "sci-107",
+      "name": "Dia Internacional contra la Corrupción",
+      "description": "ONU/UNODC. Central para derecho, criminología, política criminal y estudios de gobernanza.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 108,
+      "day": 9,
+      "month": 12
+    },
+    {
+      "id": "sci-108",
+      "name": "Dia Internacional de los Derechos Humanos y entrega del Premio Nobel",
+      "description": "ONU. Adopción de la Declaración Universal (1948) y entrega anual del Premio Nobel en Oslo y Estocolmo.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 109,
+      "day": 10,
+      "month": 12
+    },
+    {
+      "id": "sci-109",
+      "name": "Natalicio de Ludwig van Beethoven (1770)",
+      "description": "Compositor alemán, figura central de la música clásica y referente para musicología e historia de las artes.",
+      "category": "Humanidades y letras",
+      "year": null,
+      "source_row": 110,
+      "day": 16,
+      "month": 12
+    },
+    {
+      "id": "sci-111",
+      "name": "Dia Internacional de la Lengua Árabe",
+      "description": "UNESCO. Relevante para lingüística comparada, estudios árabes y cooperación académica.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 112,
+      "day": 18,
+      "month": 12
+    },
+    {
+      "id": "sci-110",
+      "name": "Dia Internacional del Migrante",
+      "description": "ONU. Marco para sociología, derecho internacional, política migratoria y estudios de movilidad humana.",
+      "category": "Organismos multilaterales y ONU",
+      "year": null,
+      "source_row": 111,
+      "day": 18,
+      "month": 12
+    },
+    {
+      "id": "sci-112",
+      "name": "Natalicio de Srinivasa Ramanujan (1887)",
+      "description": "Matemático indio autodidacta cuyo trabajo en teoría de números es referente para matemáticas puras.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 113,
+      "day": 22,
+      "month": 12
+    },
+    {
+      "id": "sci-113",
+      "name": "Descubrimiento de los Rayos X por Wilhelm Roentgen (1895)",
+      "description": "Roentgen presento su descubrimiento ante la comunidad científica. Hito central de la física moderna y la medicina.",
+      "category": "Hitos históricos de la ciencia",
+      "year": null,
+      "source_row": 114,
+      "day": 28,
+      "month": 12
+    }
+  ],
+  "variable_events": [
+    {
+      "id": "sci-35",
+      "name": "Dia del Idioma en Colombia",
+      "description": "Conmemoración del español colombiano. Ferias del libro, lecturas públicas y eventos literarios en universidades del país.",
+      "category": "Fechas académicas de Colombia",
+      "year": null,
+      "source_row": 36,
+      "month": 4,
+      "date_text": "ultimo jueves"
+    },
+    {
+      "id": "sci-85",
+      "name": "Anuncio del Premio Nobel (Estocolmo)",
+      "description": "Evento central anual para las comunidades científicas y académicas mundiales. Se anuncian los premios en Física, Química, Medicina, Literatura, Paz y Economía.",
+      "category": "Ciencia y tecnología",
+      "year": null,
+      "source_row": 86,
+      "month": 10,
+      "date_text": "primera semana"
+    }
+  ],
+  "undated_records": [
+    {
+      "id": "sci-48",
+      "name": "Fundación de la Universidad de los Andes (1948)",
+      "description": "Fundada el 16 de noviembre de 1948 en Bogotá. Una de las principales universidades privadas de Colombia.",
+      "category": "Instituciones académicas de Colombia",
+      "year": null,
+      "source_row": 49,
+      "date_text": "2026-11-16 00:00:00",
+      "month_text": "Mayo"
+    },
+    {
+      "id": "sci-116",
+      "name": "Fundación de la Universidad del Cauca",
+      "description": "Creada por Francisco de Paula Santander en 1827. Una de las universidades públicas más antiguas del país.",
+      "category": "Instituciones academicas Colombia - Creación",
+      "year": 1827,
+      "source_row": 117,
+      "date_text": null,
+      "month_text": null
+    },
+    {
+      "id": "sci-117",
+      "name": "Fundación de la Universidad de Cartagena (1827)",
+      "description": "Origen en el Colegio Provincial de Cartagena (1804). Importante institución publica de la Costa Caribe colombiana.",
+      "category": "Instituciones academicas Colombia - Creación",
+      "year": 1827,
+      "source_row": 118,
+      "date_text": null,
+      "month_text": null
+    },
+    {
+      "id": "sci-118",
+      "name": "Fundación de la Universidad del Rosario (1653)",
+      "description": "Fundada en 1653 por Fray Cristóbal de Torres. Una de las más antiguas de Colombia y América Latina.",
+      "category": "Instituciones academicas Colombia - Creación",
+      "year": 1653,
+      "source_row": 119,
+      "date_text": null,
+      "month_text": null
+    },
+    {
+      "id": "sci-119",
+      "name": "Fundación de la Universidad de Bolonia (1088)",
+      "description": "Considerada la universidad más antigua del mundo occidental. Origen del modelo universitario europeo.",
+      "category": "Instituciones academicas Mundo - Creación",
+      "year": 1088,
+      "source_row": 120,
+      "date_text": null,
+      "month_text": null
+    },
+    {
+      "id": "sci-120",
+      "name": "Fundación de la Universidad de Cambridge (1209)",
+      "description": "Segunda universidad más antigua del mundo anglosajona. Cuna de Newton, Darwin, Hawking y más de 100 premios Nobel.",
+      "category": "Instituciones academicas Mundo - Creación",
+      "year": 1209,
+      "source_row": 121,
+      "date_text": null,
+      "month_text": null
+    },
+    {
+      "id": "sci-121",
+      "name": "Fundación de Harvard University (1636)",
+      "description": "Primera universidad de los Estados Unidos. Referente global en investigación, ciencias sociales y derecho.",
+      "category": "Instituciones academicas Mundo - Creación",
+      "year": 1636,
+      "source_row": 122,
+      "date_text": null,
+      "month_text": null
+    },
+    {
+      "id": "sci-122",
+      "name": "Publicación de revolutionibus orbium coelestium de Copernico",
+      "description": "Copernico público su modelo heliocéntrico del sistema solar. Inicio de la revolución científica moderna.",
+      "category": "Hitos históricos de la ciencia",
+      "year": null,
+      "source_row": 123,
+      "date_text": null,
+      "month_text": null
+    },
+    {
+      "id": "sci-123",
+      "name": "Publicación de Principia Matemática de Newton",
+      "description": "Isaac Newton publico sus Principios Matemáticos de la Filosofía Natural. Obra fundacional de la física clásica.",
+      "category": "Hitos históricos de la ciencia",
+      "year": null,
+      "source_row": 124,
+      "date_text": null,
+      "month_text": null
+    },
+    {
+      "id": "sci-124",
+      "name": "Publicación de El origen de las especies de Darwin",
+      "description": "Charles Darwin público el libro que estableció la teoría de la evolución por selección natural.",
+      "category": "Hitos históricos de la ciencia",
+      "year": null,
+      "source_row": 125,
+      "date_text": null,
+      "month_text": null
+    },
+    {
+      "id": "sci-125",
+      "name": "Descubrimiento de los rayos X por Roentgen",
+      "description": "Wilhelm Roentgen descubrió los rayos X el 8 de noviembre de 1895. Transformo la medicina y la física moderna.",
+      "category": "Hitos históricos de la ciencia",
+      "year": null,
+      "source_row": 126,
+      "date_text": null,
+      "month_text": null
+    },
+    {
+      "id": "sci-126",
+      "name": "Años Mira bilis de Einstein",
+      "description": "Einstein publico cuatro artículos fundamentales: efecto fotoeléctrico, movimiento browniano, relatividad especial y equivalencia masa-energía.",
+      "category": "Hitos históricos de la ciencia",
+      "year": null,
+      "source_row": 127,
+      "date_text": null,
+      "month_text": null
+    },
+    {
+      "id": "sci-127",
+      "name": "Descubrimiento de la estructura del ADN (Watson y Crick)",
+      "description": "James Watson y Francis Crick publicaron la estructura de doble hélice del ADN. Hito fundacional de la biología molecular.",
+      "category": "Hitos históricos de la ciencia",
+      "year": null,
+      "source_row": 128,
+      "date_text": null,
+      "month_text": null
+    },
+    {
+      "id": "sci-128",
+      "name": "Llegada del ser humano a la Luna (Apolo 11)",
+      "description": "El 20 de julio de 1969 Neil Armstrong piso la Luna. Hito máximo de la exploración espacial y la ingeniería aeronáutica.",
+      "category": "Hitos históricos de la ciencia",
+      "year": null,
+      "source_row": 129,
+      "date_text": null,
+      "month_text": null
+    },
+    {
+      "id": "sci-129",
+      "name": "Creación de la World Wide Web por Tim Berners-Lee",
+      "description": "Berners-Lee propuso e implemento la WWW en el CERN. Transformación radical de la comunicación, la educación y la investigación.",
+      "category": "Hitos históricos de la ciencia",
+      "year": null,
+      "source_row": 130,
+      "date_text": null,
+      "month_text": null
+    }
+  ],
+  "issues": [
+    {
+      "source_row": 49,
+      "name": "Fundación de la Universidad de los Andes (1948)",
+      "issue": "Campo Día contiene 2026-11-16 00:00:00 mientras Mes=Mayo"
+    }
+  ]
+}

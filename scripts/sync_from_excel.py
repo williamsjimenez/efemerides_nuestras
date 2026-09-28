@@ -403,7 +403,17 @@ def main():
     if not rows:
         raise RuntimeError("El archivo descargado no contiene registros.")
     raw = build_compact(rows, source_url)
-    Path(args.output).write_text(json.dumps(raw, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+    output_path = Path(args.output)
+    if output_path.exists():
+        try:
+            old = json.loads(output_path.read_text(encoding="utf-8"))
+            if old.get("r") == raw.get("r"):
+                raw["m"]["synced_at"] = old.get("m", {}).get("synced_at", raw["m"]["synced_at"])
+        except Exception:
+            pass
+
+    output_path.write_text(json.dumps(raw, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     manifest = {
         "parts": [args.output],
         "records": raw["m"]["records"],

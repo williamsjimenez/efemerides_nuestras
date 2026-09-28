@@ -3,25 +3,24 @@ name: Sincronizar efemérides desde OneDrive
 on:
   workflow_dispatch:
   schedule:
-    # GitHub Actions revisa el Excel cada 30 minutos.
     - cron: "*/30 * * * *"
   push:
     paths:
       - ".github/workflows/sync-universidades.yml"
       - "scripts/sync_onedrive.py"
+      - "scripts/sync_cientificas.py"
 
 permissions:
   contents: write
 
 concurrency:
-  group: sync-universidades-onedrive
+  group: sync-efemerides-onedrive
   cancel-in-progress: true
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-
+    timeout-minutes: 20
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
@@ -37,21 +36,27 @@ jobs:
           pip install openpyxl playwright
           python -m playwright install chromium --with-deps
 
-      - name: Leer Excel maestro desde OneDrive y regenerar JSON
+      - name: Sincronizar aniversarios universitarios
         env:
           ONEDRIVE_FOLDER_URL: "https://1drv.ms/f/c/f0437e1066d439c2/IgDmj1ecZZJqR7aps0WECltfAan6hhW4YcCKh7ykiL4Iw9E?e=QPrUMV"
           ONEDRIVE_EXCEL_NAME: "Repositorio_Maestro_Efemerides_Universitarias.xlsx"
           OUTPUT_JSON: "data/universidades.json"
         run: python scripts/sync_onedrive.py
 
-      - name: Publicar cambios solo si el Excel cambió
+      - name: Sincronizar efemérides científicas
+        env:
+          SCIENTIFIC_ONEDRIVE_URL: "https://1drv.ms/x/c/f0437e1066d439c2/IQAG-oAXUhAgR6GLr-icPyUEAV8yn94El0QRd_kLoOFteuE?e=D0fVWv"
+          SCIENTIFIC_OUTPUT_JSON: "data/cientificas.json"
+        run: python scripts/sync_cientificas.py
+
+      - name: Publicar cambios
         run: |
-          if git diff --quiet -- data/universidades.json; then
-            echo "El Excel no cambió. No se crea commit."
+          if git diff --quiet -- data/universidades.json data/cientificas.json; then
+            echo "No hay cambios en los Excel maestros."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/universidades.json
+          git add data/universidades.json data/cientificas.json
           git commit -m "Sync efemérides desde OneDrive"
           git push

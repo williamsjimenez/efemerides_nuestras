@@ -107,3 +107,16 @@ footer { max-width: 1280px; margin: 0 auto; padding: 20px 28px 50px; color: var(
   .doc-link { align-items: flex-start; flex-direction: column; }
   footer { padding-top: 8px; padding-bottom: 30px; }
 }
+
+.header-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 7px; }
+.header-buttons { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.button-secondary { background: var(--accent-soft); color: var(--accent); }
+.button:disabled { opacity: .6; cursor: wait; }
+.sync-status { margin: 0; color: var(--muted); font-size: .72rem; text-align: right; }
+
+@media (max-width: 650px) {
+  .header-actions { width: 100%; align-items: stretch; }
+  .header-buttons { display: grid; grid-template-columns: 1fr; width: 100%; }
+  .header-buttons .button { width: 100%; min-height: 44px; }
+  .sync-status { text-align: center; line-height: 1.35; }
+}

@@ -173,8 +173,14 @@ function eventContext(e, year) {
   return parts.join(" · ");
 }
 function fillFilters() {
+  const sedeValue = state.filters.sede;
+  const kindValue = state.filters.kind;
+  $("sedeFilter").innerHTML = '<option value="">Todas</option>';
+  $("kindFilter").innerHTML = '<option value="">Todos</option>';
   unique(state.data.entities.map(e => e.sede)).forEach(v => $("sedeFilter").insertAdjacentHTML("beforeend", `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`));
   unique(state.data.entities.map(e => e.kind)).forEach(v => $("kindFilter").insertAdjacentHTML("beforeend", `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`));
+  $("sedeFilter").value = sedeValue;
+  $("kindFilter").value = kindValue;
 }
 function renderCalendar() {
   const y = CALENDAR_YEAR, m = state.current.getMonth();
@@ -266,27 +272,82 @@ function renderAll() { renderCalendar(); renderMonthList(); }
 function escapeHtml(value) { return String(value ?? "").replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch])); }
 function escapeAttr(value) { return escapeHtml(value); }
 function icsEscape(value) { return String(value ?? "").replace(/\\/g,"\\\\").replace(/,/g,"\\,").replace(/;/g,"\\;").replace(/\n/g,"\\n"); }
+async function loadData(showFeedback = false) {
+  const button = $("refreshData");
+  const status = $("syncStatus");
+  const previousText = button?.textContent;
+
+  if (showFeedback && button) {
+    button.disabled = true;
+    button.textContent = "Actualizando…";
+  }
+  if (showFeedback && status) status.textContent = "Consultando la versión más reciente…";
+
+  try {
+    const rawBase = "https://raw.githubusercontent.com/williamsjimenez/efemerides_nuestras/main/";
+    const cacheBust = Date.now();
+    const manifest = await fetch(`${rawBase}data/manifest.json?v=${cacheBust}`, {
+      cache: "no-store",
+      headers: { "Cache-Control": "no-cache" }
+    }).then(r => {
+      if (!r.ok) throw new Error("No se pudo cargar el manifiesto de datos");
+      return r.json();
+    });
+
+    const chunks = await Promise.all(manifest.parts.map(p =>
+      fetch(`${rawBase}${p}?v=${cacheBust}`, {
+        cache: "no-store",
+        headers: { "Cache-Control": "no-cache" }
+      }).then(r => {
+        if (!r.ok) throw new Error(`No se pudo cargar ${p}`);
+        return r.text();
+      })
+    ));
+
+    state.data = expandCompact(JSON.parse(chunks.join("")));
+    fillFilters();
+    renderAll();
+
+    if (status) {
+      const syncedAt = manifest.synced_at ? new Date(manifest.synced_at) : null;
+      const label = syncedAt && !Number.isNaN(syncedAt.getTime())
+        ? syncedAt.toLocaleString("es-CO", { dateStyle: "short", timeStyle: "short" })
+        : "ahora";
+      status.textContent = `Datos cargados · sincronización de origen: ${label}`;
+    }
+  } catch (error) {
+    console.error(error);
+    if (status) status.textContent = "No se pudo actualizar. Se mantiene la última versión cargada.";
+  } finally {
+    if (showFeedback && button) {
+      button.disabled = false;
+      button.textContent = previousText || "Actualizar datos";
+    }
+  }
+}
+
 async function init() {
-  const rawBase = "https://raw.githubusercontent.com/williamsjimenez/efemerides_nuestras/main/";
-  const cacheBust = Date.now();
-  const manifest = await fetch(`${rawBase}data/manifest.json?v=${cacheBust}`, { cache: "no-store" }).then(r => {
-    if (!r.ok) throw new Error("No se pudo cargar el manifiesto de datos");
-    return r.json();
-  });
-  const chunks = await Promise.all(manifest.parts.map(p => fetch(`${rawBase}${p}?v=${cacheBust}`, { cache: "no-store" }).then(r => {
-    if (!r.ok) throw new Error(`No se pudo cargar ${p}`);
-    return r.text();
-  })));
-  state.data = expandCompact(JSON.parse(chunks.join("")));
-  fillFilters();
+  await loadData(false);
+
   $("searchInput").addEventListener("input", e => { state.filters.search = e.target.value.trim(); renderAll(); });
   $("sedeFilter").addEventListener("change", e => { state.filters.sede = e.target.value; renderAll(); });
   $("kindFilter").addEventListener("change", e => { state.filters.kind = e.target.value; renderAll(); });
   $("prevMonth").addEventListener("click", () => { state.current = new Date(CALENDAR_YEAR, (state.current.getMonth() + 11) % 12, 1); renderAll(); });
   $("nextMonth").addEventListener("click", () => { state.current = new Date(CALENDAR_YEAR, (state.current.getMonth() + 1) % 12, 1); renderAll(); });
   $("downloadIcs").addEventListener("click", downloadICS);
+  $("refreshData").addEventListener("click", () => loadData(true));
   $("closeDialog").addEventListener("click", () => $("detailDialog").close());
   $("detailDialog").addEventListener("click", e => { if (e.target === $("detailDialog")) $("detailDialog").close(); });
-  renderAll();
+
+  setInterval(() => {
+    if (!document.hidden) loadData(false);
+  }, 120000);
+
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) loadData(false);
+  });
+
+  window.addEventListener("focus", () => loadData(false));
 }
+
 init();

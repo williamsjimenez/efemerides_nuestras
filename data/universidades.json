@@ -1,9 +1,10 @@
 {
   "meta": {
     "title": "Efemérides universitarias",
-    "updated": "2026-09-28",
     "source": "Repositorio_Maestro_Efemerides_Universitarias.xlsx",
-    "records": 25
+    "records": 25,
+    "synced_from_onedrive": true,
+    "last_sync_utc": "2026-09-29T04:52:58+00:00"
   },
   "institutions": [
     {
@@ -215,19 +216,6 @@
       "type": "Universidad"
     },
     {
-      "name": "Unión de Universidades de América Latina y el Caribe – UDUALC",
-      "country": "Regional",
-      "foundation_year": 1949,
-      "day": 22,
-      "month": 9,
-      "rectors": {
-        "2026": "Jorge Calzoni (Presidente)",
-        "2027": "",
-        "2028": ""
-      },
-      "type": "Unión universitaria"
-    },
-    {
       "name": "Universidad Nacional Autónoma de México",
       "country": "México",
       "foundation_year": 1910,
@@ -239,6 +227,19 @@
         "2028": ""
       },
       "type": "Universidad"
+    },
+    {
+      "name": "Unión de Universidades de América Latina y el Caribe – UDUALC",
+      "country": "Regional",
+      "foundation_year": 1949,
+      "day": 22,
+      "month": 9,
+      "rectors": {
+        "2026": "Jorge Calzoni (Presidente)",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Unión universitaria"
     },
     {
       "name": "Universidad Autónoma de Nuevo León",

@@ -172,6 +172,24 @@ function eventContext(e, year) {
 
   return parts.join(" · ");
 }
+function calendarMeta(e) {
+  const entity = entityById(e.entity_id) || {};
+  const kind = entity.kind || e.entity_kind || "";
+  const name = entity.name || e.entity_name || "";
+  const sede = entity.sede || e.sede;
+  const facultad = entity.facultad || e.facultad;
+
+  if (kind === "Sede") return "UNAL";
+  if (kind === "Facultad") return sede ? sedeLabel(sede) : "UNAL";
+  if (kind === "Programa") {
+    return [sede ? sedeLabel(sede) : null, facultad && facultad !== name ? facultad : null]
+      .filter(Boolean)
+      .join(" · ");
+  }
+  return [sede ? sedeLabel(sede) : null, facultad && facultad !== name ? facultad : null]
+    .filter(Boolean)
+    .join(" · ");
+}
 function fillFilters() {
   unique(state.data.entities.map(e => e.sede)).forEach(v => $("sedeFilter").insertAdjacentHTML("beforeend", `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`));
   unique(state.data.entities.map(e => e.kind)).forEach(v => $("kindFilter").insertAdjacentHTML("beforeend", `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`));
@@ -192,7 +210,7 @@ function renderCalendar() {
     const dayEvents = outside ? [] : ev.filter(e => e.day === d.getDate());
     html += `<div class="day ${outside ? "outside" : ""}"><div class="day-number">${d.getDate()}</div>`;
     dayEvents.slice(0,3).forEach(e => {
-      const context = eventContext(e, y);
+      const context = calendarMeta(e);
       html += `<button class="event-chip ${e.status === "con-acto-sin-documento" ? "pending" : ""}" data-event="${e.id}">
         <span class="event-chip-title">${escapeHtml(e.entity_name)}</span>
         ${context ? `<span class="event-chip-meta">${escapeHtml(context)}</span>` : ""}
@@ -222,10 +240,18 @@ function openEvent(eventId) {
     ? new Intl.DateTimeFormat("es-CO", { day:"numeric", month:"long", timeZone:"UTC" }).format(new Date(Date.UTC(2000, e.month - 1, e.day)))
     : (e.date_text || "Pendiente");
 
-  const docs = (entity.documents || []).length ? entity.documents.map(d => {
-    const href = d.pdf_url || d.source_url;
-    return `<a class="doc-link" href="${escapeAttr(href)}" target="_blank" rel="noopener"><span>${escapeHtml(d.label)} <small>${escapeHtml(d.status)}</small></span><strong>Ver documento ↗</strong></a>`;
-  }).join("") : `<div class="empty">Este registro todavía no tiene enlace en Enlace documento 1, 2 o 3 del Excel.</div>`;
+  const entityDocs = entity.documents || [];
+  const docs = [1, 2, 3].map((slot) => {
+    const doc = entityDocs.find(d =>
+      String(d.id || "").endsWith(`-doc-${slot}`) ||
+      String(d.label || "").trim().toLowerCase() === `documento ${slot}`
+    );
+    if (!doc) {
+      return `<div class="doc-link doc-pending"><span>Documento ${slot}</span><strong>Pendiente</strong></div>`;
+    }
+    const href = doc.pdf_url || doc.source_url;
+    return `<a class="doc-link" href="${escapeAttr(href)}" target="_blank" rel="noopener"><span>Documento ${slot}</span><strong>Ver documento ↗</strong></a>`;
+  }).join("");
 
   const age = entity.creation_year ? CALENDAR_YEAR - entity.creation_year : null;
   $("dialogContent").innerHTML = `<p class="eyebrow">${escapeHtml(entity.kind)} · ${escapeHtml(entity.sede || "Sede pendiente")}</p>

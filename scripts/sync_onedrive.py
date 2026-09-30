@@ -11,19 +11,20 @@ identical (except when data changes), so GitHub will not create a needless commi
 from __future__ import annotations
 
 import asyncio
+import base64
 import json
 import os
 import re
 import tempfile
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
 from openpyxl import load_workbook
-from playwright.async_api import async_playwright
 
 SHARE_URL = os.environ.get(
-    "ONEDRIVE_FOLDER_URL",
-    "https://1drv.ms/f/c/f0437e1066d439c2/IgDmj1ecZZJqR7aps0WECltfAan6hhW4YcCKh7ykiL4Iw9E?e=QPrUMV",
+    "ONEDRIVE_EXCEL_URL",
+    "https://1drv.ms/x/c/f0437e1066d439c2/IQAv66Gk4KVHSZa9AhJwlOicAUruLJtLe7NfeEkDBUGDljc?e=YIcR7d",
 )
 EXCEL_NAME = os.environ.get(
     "ONEDRIVE_EXCEL_NAME",
@@ -128,53 +129,57 @@ def build_json(xlsx_path: Path) -> dict:
     }
 
 
-async def _download_with_browser(dest: Path) -> None:
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context(accept_downloads=True)
-        page = await context.new_page()
-        await page.goto(SHARE_URL, wait_until="domcontentloaded", timeout=120_000)
+def _fetch_bytes(url: str, headers=None, data=None, timeout=60):
+    req = urllib.request.Request(url, data=data, headers=headers or {})
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return resp.read(), resp.geturl(), resp.headers.get("Content-Type", "")
 
-        # Give OneDrive's client-side file list time to render.
-        await page.wait_for_timeout(8_000)
 
-        # First try the exact visible file name.
-        target = page.get_by_text(EXCEL_NAME, exact=True)
-        try:
-            await target.first.wait_for(state="visible", timeout=30_000)
-        except Exception:
-            # Search the rendered DOM for anything containing the workbook name.
-            target = page.locator(f'text="{EXCEL_NAME}"')
-            await target.first.wait_for(state="visible", timeout=30_000)
+def _download_direct_onedrive(dest: Path) -> None:
+    token_body = json.dumps({"appId": "5cbed6ac-a083-4e14-b191-b4ba07653de2"}).encode("utf-8")
+    token_bytes, _, _ = _fetch_bytes(
+        "https://api-badgerp.svc.ms/v1.0/token",
+        headers={
+            "User-Agent": "Mozilla/5.0 EfemeridesUniversitarias/1.0",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+        data=token_body,
+    )
+    token_payload = json.loads(token_bytes.decode("utf-8"))
+    badger_token = token_payload.get("token")
+    if not badger_token:
+        raise RuntimeError("OneDrive no devolvió el token temporal.")
 
-        # Select the file, then use OneDrive's Download command.
-        await target.first.click()
-        await page.wait_for_timeout(1_000)
+    encoded = base64.urlsafe_b64encode(SHARE_URL.encode("utf-8")).decode("ascii").rstrip("=")
+    api_url = (
+        "https://my.microsoftpersonalcontent.com/_api/v2.0/shares/"
+        f"u!{encoded}/driveitem?select=@content.downloadUrl,name"
+    )
+    item_bytes, _, _ = _fetch_bytes(
+        api_url,
+        headers={
+            "User-Agent": "Mozilla/5.0 EfemeridesUniversitarias/1.0",
+            "Accept": "application/json",
+            "Prefer": "autoredeem",
+            "Authorization": f"Badger {badger_token}",
+        },
+    )
+    item = json.loads(item_bytes.decode("utf-8"))
+    download_url = item.get("@content.downloadUrl")
+    if not download_url:
+        raise RuntimeError("OneDrive no devolvió una URL de descarga para el Excel.")
 
-        # Try common localized labels / accessible names.
-        download_button = page.get_by_role("button", name=re.compile(r"download|descargar", re.I))
-        if await download_button.count() == 0:
-            download_button = page.get_by_text(re.compile(r"^\s*(Download|Descargar)\s*$", re.I))
-
-        if await download_button.count() == 0:
-            # Double-click often opens Excel Online. From there, the page provides a
-            # file-specific URL that can be requested with ?download=1.
-            await target.first.dblclick()
-            await page.wait_for_timeout(5_000)
-            current = page.url
-            joiner = "&" if "?" in current else "?"
-            r = await context.request.get(current + joiner + "download=1", timeout=120_000)
-            body = await r.body()
-            if not body.startswith(b"PK"):
-                raise RuntimeError("OneDrive no devolvió un archivo XLSX descargable.")
-            dest.write_bytes(body)
-        else:
-            async with page.expect_download(timeout=120_000) as info:
-                await download_button.first.click()
-            download = await info.value
-            await download.save_as(str(dest))
-
-        await browser.close()
+    data, _, content_type = _fetch_bytes(
+        download_url,
+        headers={"User-Agent": "Mozilla/5.0 EfemeridesUniversitarias/1.0"},
+        timeout=120,
+    )
+    if not data.startswith(b"PK\x03\x04"):
+        raise RuntimeError(
+            f"OneDrive no devolvió un XLSX válido ({content_type}, {len(data)} bytes)."
+        )
+    dest.write_bytes(data)
 
     if not dest.exists() or dest.stat().st_size < 1000:
         raise RuntimeError("La descarga de OneDrive quedó vacía o incompleta.")
@@ -184,7 +189,7 @@ async def main() -> None:
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as td:
         xlsx = Path(td) / EXCEL_NAME
-        await _download_with_browser(xlsx)
+        _download_direct_onedrive(xlsx)
         payload = build_json(xlsx)
 
     # Preserve a stable file when no data changed. This allows the workflow to

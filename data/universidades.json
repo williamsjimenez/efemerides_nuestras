@@ -2,9 +2,9 @@
   "meta": {
     "title": "Efemérides universitarias",
     "source": "Repositorio_Maestro_Efemerides_Universitarias.xlsx",
-    "records": 25,
+    "records": 33,
     "synced_from_onedrive": true,
-    "last_sync_utc": "2026-09-29T04:52:58+00:00"
+    "last_sync_utc": "2026-09-30T21:46:43+00:00"
   },
   "institutions": [
     {
@@ -262,6 +262,110 @@
       "month": 9,
       "rectors": {
         "2026": "Francisco Covarrubias",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Duquesne University",
+      "country": "Australia",
+      "foundation_year": 1878,
+      "day": 1,
+      "month": 10,
+      "rectors": {
+        "2026": "David D. Dausey",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Pontificia Universidad Javeriana",
+      "country": "Colombia",
+      "foundation_year": 1930,
+      "day": 1,
+      "month": 10,
+      "rectors": {
+        "2026": "Luis Fernando Múnera Congote",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The University of Sidney",
+      "country": "Australia",
+      "foundation_year": 1850,
+      "day": 1,
+      "month": 10,
+      "rectors": {
+        "2026": "Mark Scott",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Tongji University",
+      "country": "China",
+      "foundation_year": 1907,
+      "day": 1,
+      "month": 10,
+      "rectors": {
+        "2026": "ZHENG Qinghua",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Sucre",
+      "country": "Colombia",
+      "foundation_year": 1977,
+      "day": 1,
+      "month": 10,
+      "rectors": {
+        "2026": "Johnny Alberto Avendaño Estrada",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Tianjin University",
+      "country": "China",
+      "foundation_year": 1895,
+      "day": 2,
+      "month": 10,
+      "rectors": {
+        "2026": "Chai Liyuan",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Monteávila",
+      "country": "Venezuela",
+      "foundation_year": 1998,
+      "day": 2,
+      "month": 10,
+      "rectors": {
+        "2026": "Guillermo Fariñas Contreras",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Ahmadu Bello University",
+      "country": "Nigeria",
+      "foundation_year": 1962,
+      "day": 4,
+      "month": 10,
+      "rectors": {
+        "2026": "Mahmud Yayale Ahmed",
         "2027": "",
         "2028": ""
       },

@@ -33,12 +33,11 @@ jobs:
       - name: Instalar dependencias
         run: |
           python -m pip install --upgrade pip
-          pip install openpyxl playwright
-          python -m playwright install chromium --with-deps
+          pip install openpyxl
 
       - name: Sincronizar aniversarios universitarios
         env:
-          ONEDRIVE_FOLDER_URL: "https://1drv.ms/f/c/f0437e1066d439c2/IgDmj1ecZZJqR7aps0WECltfAan6hhW4YcCKh7ykiL4Iw9E?e=QPrUMV"
+          ONEDRIVE_EXCEL_URL: "https://1drv.ms/x/c/f0437e1066d439c2/IQAv66Gk4KVHSZa9AhJwlOicAUruLJtLe7NfeEkDBUGDljc?e=YIcR7d"
           ONEDRIVE_EXCEL_NAME: "Repositorio_Maestro_Efemerides_Universitarias.xlsx"
           OUTPUT_JSON: "data/universidades.json"
         run: python scripts/sync_onedrive.py

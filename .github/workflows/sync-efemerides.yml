@@ -3,7 +3,7 @@ name: Sincronizar efemérides UNAL desde OneDrive
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "5,20,35,50 * * * *"
   push:
     paths:
       - ".github/workflows/sync-efemerides.yml"
@@ -15,11 +15,12 @@ permissions:
 
 concurrency:
   group: sync-efemerides-unal
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4

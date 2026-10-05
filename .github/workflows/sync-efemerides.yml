@@ -1,4 +1,4 @@
-name: Sincronizar efemerides desde OneDrive
+name: Sincronizar efemérides UNAL desde OneDrive
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: sync-efemerides
+  group: sync-efemerides-unal
   cancel-in-progress: false
 
 jobs:

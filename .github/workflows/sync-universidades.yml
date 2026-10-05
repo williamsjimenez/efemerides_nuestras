@@ -3,7 +3,7 @@ name: Sincronizar efemérides desde OneDrive
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/15 * * * *"
   push:
     paths:
       - ".github/workflows/sync-universidades.yml"
@@ -15,7 +15,7 @@ permissions:
 
 concurrency:
   group: sync-efemerides-onedrive
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   sync:
@@ -36,28 +36,58 @@ jobs:
           pip install openpyxl playwright
           python -m playwright install chromium --with-deps
 
+      - name: Configurar Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Sincronizar aniversarios universitarios
+        id: universidades
+        continue-on-error: true
         env:
           ONEDRIVE_EXCEL_URL: "https://1drv.ms/x/c/f0437e1066d439c2/IQAv66Gk4KVHSZa9AhJwlOicAUruLJtLe7NfeEkDBUGDljc?e=YIcR7d"
           ONEDRIVE_EXCEL_NAME: "Repositorio_Maestro_Efemerides_Universitarias.xlsx"
           OUTPUT_JSON: "data/universidades.json"
         run: python scripts/sync_onedrive.py
 
+      - name: Publicar aniversarios universitarios
+        if: steps.universidades.outcome == 'success'
+        run: |
+          if git diff --quiet -- data/universidades.json; then
+            echo "Sin cambios en aniversarios universitarios."
+          else
+            git add data/universidades.json
+            git commit -m "Sync aniversarios universitarios desde OneDrive"
+            git pull --rebase origin main
+            git push
+          fi
+
       - name: Sincronizar efemérides científicas
+        id: cientificas
+        continue-on-error: true
         env:
           SCIENTIFIC_ONEDRIVE_URL: "https://1drv.ms/x/c/f0437e1066d439c2/IQAG-oAXUhAgR6GLr-icPyUEAV8yn94El0QRd_kLoOFteuE?e=D0fVWv"
           SCIENTIFIC_OUTPUT_JSON: "data/cientificas.json"
         run: python scripts/sync_cientificas.py
 
-      - name: Publicar cambios
+      - name: Publicar efemérides científicas
+        if: steps.cientificas.outcome == 'success'
         run: |
-          if git diff --quiet -- data/universidades.json data/cientificas.json; then
-            echo "No hay cambios en los Excel maestros."
-            exit 0
+          if git diff --quiet -- data/cientificas.json; then
+            echo "Sin cambios en efemérides científicas."
+          else
+            git add data/cientificas.json
+            git commit -m "Sync efemérides científicas desde OneDrive"
+            git pull --rebase origin main
+            git push
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/universidades.json data/cientificas.json
-          git commit -m "Sync efemérides desde OneDrive"
-          git pull --rebase origin main
-          git push
+
+      - name: Verificar sincronizaciones
+        if: always()
+        run: |
+          echo "Universidades: ${{ steps.universidades.outcome }}"
+          echo "Científicas: ${{ steps.cientificas.outcome }}"
+          if [ "${{ steps.universidades.outcome }}" != "success" ] || [ "${{ steps.cientificas.outcome }}" != "success" ]; then
+            echo "Al menos una fuente no pudo sincronizarse. La otra fuente, si tuvo éxito, ya fue publicada."
+            exit 1
+          fi

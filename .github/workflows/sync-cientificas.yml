@@ -3,7 +3,7 @@ name: Sincronizar efemérides científicas desde OneDrive
 on:
   workflow_dispatch:
   schedule:
-    - cron: "7,22,37,52 * * * *"
+    - cron: "8,23,38,53 * * * *"
   push:
     paths:
       - ".github/workflows/sync-cientificas.yml"
@@ -14,7 +14,7 @@ permissions:
 
 concurrency:
   group: sync-cientificas
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   sync:

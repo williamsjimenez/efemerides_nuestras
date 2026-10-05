@@ -2,11 +2,89 @@
   "meta": {
     "title": "Efemérides universitarias",
     "source": "Repositorio_Maestro_Efemerides_Universitarias.xlsx",
-    "records": 33,
+    "records": 62,
     "synced_from_onedrive": true,
-    "last_sync_utc": "2026-09-30T21:46:43+00:00"
+    "last_sync_utc": "2026-10-05T15:53:39+00:00"
   },
   "institutions": [
+    {
+      "name": "Universidad Pedagógica Nacional",
+      "country": "Colombia",
+      "foundation_year": 1955,
+      "day": 10,
+      "month": 2,
+      "rectors": {
+        "2026": "Helberth Choachí González",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Libre",
+      "country": "Colombia",
+      "foundation_year": 1923,
+      "day": 13,
+      "month": 2,
+      "rectors": {
+        "2026": "César Augusto López Meza",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Externado de Colombia",
+      "country": "Colombia",
+      "foundation_year": 1886,
+      "day": 15,
+      "month": 2,
+      "rectors": {
+        "2026": "Hernando Parra Nieto",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Católica de Colombia",
+      "country": "Colombia",
+      "foundation_year": 1970,
+      "day": 3,
+      "month": 3,
+      "rectors": {
+        "2026": "Francisco José Gómez Ortiz",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Antonio Nariño",
+      "country": "Colombia",
+      "foundation_year": 1976,
+      "day": 7,
+      "month": 3,
+      "rectors": {
+        "2026": "Mary Falk de Losada",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Central",
+      "country": "Colombia",
+      "foundation_year": 1966,
+      "day": 30,
+      "month": 6,
+      "rectors": {
+        "2026": "Paula Andrea López",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
     {
       "name": "Universidad de Santiago de Chile",
       "country": "Chile",
@@ -15,6 +93,45 @@
       "month": 7,
       "rectors": {
         "2026": "Pedro Iván Palominos Belmar",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Nacional Abierta y a Distancia (UNAD)",
+      "country": "Colombia",
+      "foundation_year": 1981,
+      "day": 7,
+      "month": 7,
+      "rectors": {
+        "2026": "Jaime Alberto Leal Afanador",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Militar Nueva Granada",
+      "country": "Colombia",
+      "foundation_year": 1982,
+      "day": 23,
+      "month": 7,
+      "rectors": {
+        "2026": "Javier Alberto Ayala Amaya",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad El Bosque",
+      "country": "Colombia",
+      "foundation_year": 1977,
+      "day": 27,
+      "month": 7,
+      "rectors": {
+        "2026": "Miguel Ruiz Rubiano",
         "2027": "",
         "2028": ""
       },
@@ -138,6 +255,19 @@
       "type": "Universidad"
     },
     {
+      "name": "CESA",
+      "country": "Colombia",
+      "foundation_year": 1974,
+      "day": 29,
+      "month": 8,
+      "rectors": {
+        "2026": "Emilia Restrepo Gómez",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Tecnológico de Monterrey",
       "country": "México",
       "foundation_year": 1943,
@@ -210,6 +340,19 @@
       "month": 9,
       "rectors": {
         "2026": "José Luis Ghioldi (Presidente)",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Piloto de Colombia",
+      "country": "Colombia",
+      "foundation_year": 1962,
+      "day": 14,
+      "month": 9,
+      "rectors": {
+        "2026": "Ángela Gabriela Bernal Medina",
         "2027": "",
         "2028": ""
       },
@@ -385,6 +528,123 @@
       "type": "Universidad"
     },
     {
+      "name": "El Colegio de México, A.C.",
+      "country": "México",
+      "foundation_year": 1940,
+      "day": 8,
+      "month": 10,
+      "rectors": {
+        "2026": "",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Nacional del Centro de la Provincia de Buenos Aires (UNICEN)",
+      "country": "Argentina",
+      "foundation_year": 1974,
+      "day": 9,
+      "month": 10,
+      "rectors": {
+        "2026": "",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Yale University",
+      "country": "Estados Unidos",
+      "foundation_year": 1701,
+      "day": 9,
+      "month": 10,
+      "rectors": {
+        "2026": "",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad EAN",
+      "country": "Colombia",
+      "foundation_year": 1967,
+      "day": 11,
+      "month": 10,
+      "rectors": {
+        "2026": "",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Guadalajara (UDG)",
+      "country": "México",
+      "foundation_year": 1925,
+      "day": 12,
+      "month": 10,
+      "rectors": {
+        "2026": "",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Seoul National University",
+      "country": "Corea del Sur",
+      "foundation_year": 1946,
+      "day": 15,
+      "month": 10,
+      "rectors": {
+        "2026": "",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The Chinese University of Hong Kong (CUHK)",
+      "country": "China",
+      "foundation_year": 1963,
+      "day": 17,
+      "month": 10,
+      "rectors": {
+        "2026": "",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Nacional del Litoral",
+      "country": "Argentina",
+      "foundation_year": 1919,
+      "day": 17,
+      "month": 10,
+      "rectors": {
+        "2026": "",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Princeton University",
+      "country": "Estados Unidos",
+      "foundation_year": 1746,
+      "day": 22,
+      "month": 10,
+      "rectors": {
+        "2026": "",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Andrés Bello",
       "country": "Chile",
       "foundation_year": 1988,
@@ -392,6 +652,45 @@
       "month": 10,
       "rectors": {
         "2026": "Julio Castro Sepúlveda",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Talca",
+      "country": "Chile",
+      "foundation_year": 1981,
+      "day": 26,
+      "month": 10,
+      "rectors": {
+        "2026": "",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Harvard University",
+      "country": "Estados Unidos",
+      "foundation_year": 1636,
+      "day": 28,
+      "month": 10,
+      "rectors": {
+        "2026": "",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Sergio Arboleda",
+      "country": "Colombia",
+      "foundation_year": 1984,
+      "day": 29,
+      "month": 10,
+      "rectors": {
+        "2026": "Jorge Noguera Calderón",
         "2027": "",
         "2028": ""
       },
@@ -411,6 +710,32 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad de Antioquia",
+      "country": "Colombia",
+      "foundation_year": 1803,
+      "day": 2,
+      "month": 11,
+      "rectors": {
+        "2026": "",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Politécnico Grancolombiano",
+      "country": "Colombia",
+      "foundation_year": 1980,
+      "day": 4,
+      "month": 11,
+      "rectors": {
+        "2026": "Juan Fernando Montañez",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Pontifícia Universidade Católica do Rio Grande do Sul",
       "country": "Brasil",
       "foundation_year": 1948,
@@ -418,6 +743,45 @@
       "month": 11,
       "rectors": {
         "2026": "Manuir José Mentges",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de La Salle",
+      "country": "Colombia",
+      "foundation_year": 1964,
+      "day": 15,
+      "month": 11,
+      "rectors": {
+        "2026": "José Alexander Santafé Andrade",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de los Andes",
+      "country": "Colombia",
+      "foundation_year": 1948,
+      "day": 16,
+      "month": 11,
+      "rectors": {
+        "2026": "Raquel Bernal Salazar",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Los Andes (Colombia)",
+      "country": "Colombia",
+      "foundation_year": 1948,
+      "day": 16,
+      "month": 11,
+      "rectors": {
+        "2026": "Raquel Bernal",
         "2027": "",
         "2028": ""
       },
@@ -435,6 +799,19 @@
         "2028": ""
       },
       "type": "Instituto universitario"
+    },
+    {
+      "name": "Universidad del Rosario",
+      "country": "Colombia",
+      "foundation_year": 1653,
+      "day": 18,
+      "month": 12,
+      "rectors": {
+        "2026": "Ana Isabel Gómez Córdoba / Stéphanie Lavaux",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
     }
   ]
 }

@@ -2,11 +2,63 @@
   "meta": {
     "title": "Efemérides universitarias",
     "source": "Repositorio_Maestro_Efemerides_Universitarias.xlsx",
-    "records": 62,
+    "records": 126,
     "synced_from_onedrive": true,
-    "last_sync_utc": "2026-10-05T15:53:39+00:00"
+    "last_sync_utc": "2026-10-05T21:18:42+00:00"
   },
   "institutions": [
+    {
+      "name": "Universidad del Norte",
+      "country": "Colombia",
+      "foundation_year": 1966,
+      "day": 24,
+      "month": 1,
+      "rectors": {
+        "2026": "Adolfo Meisel Roca",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Medellín",
+      "country": "Colombia",
+      "foundation_year": 1950,
+      "day": 1,
+      "month": 2,
+      "rectors": {
+        "2026": "Néstor Raúl Posada Arboleda",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Autónoma de Occidente - UAO",
+      "country": "Colombia",
+      "foundation_year": 1974,
+      "day": 2,
+      "month": 2,
+      "rectors": {
+        "2026": "Diego Hernández Losada",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Fundación Univ. de Bogotá Jorge Tadeo Lozano",
+      "country": "Colombia",
+      "foundation_year": 1954,
+      "day": 5,
+      "month": 2,
+      "rectors": {
+        "2026": "Francisco José Lloreda Mena",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
     {
       "name": "Universidad Pedagógica Nacional",
       "country": "Colombia",
@@ -15,6 +67,32 @@
       "month": 2,
       "rectors": {
         "2026": "Helberth Choachí González",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Católica de Manizales",
+      "country": "Colombia",
+      "foundation_year": 1954,
+      "day": 11,
+      "month": 2,
+      "rectors": {
+        "2026": "Cristian Camilo Gutiérrez Restrepo",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Católica de Oriente - UCO",
+      "country": "Colombia",
+      "foundation_year": 1982,
+      "day": 11,
+      "month": 2,
+      "rectors": {
+        "2026": "Elkin de Jesús Narváez Gómez",
         "2027": "",
         "2028": ""
       },
@@ -60,6 +138,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad Manuela Beltrán - UMB",
+      "country": "Colombia",
+      "foundation_year": 1975,
+      "day": 5,
+      "month": 3,
+      "rectors": {
+        "2026": "Juan Carlos Cárdenas Castaño",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Antonio Nariño",
       "country": "Colombia",
       "foundation_year": 1976,
@@ -73,6 +164,279 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad del Tolima",
+      "country": "Colombia",
+      "foundation_year": 1945,
+      "day": 12,
+      "month": 3,
+      "rectors": {
+        "2026": "Omar Alberto Mejía Patiño",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Simón Bolívar",
+      "country": "Colombia",
+      "foundation_year": 1972,
+      "day": 17,
+      "month": 3,
+      "rectors": {
+        "2026": "José Eusebio Consuegra Bolívar",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Surcolombiana",
+      "country": "Colombia",
+      "foundation_year": 1970,
+      "day": 26,
+      "month": 3,
+      "rectors": {
+        "2026": "Rubén Darío Valbuena Villarreal",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Colegio Mayor de Cundinamarca",
+      "country": "Colombia",
+      "foundation_year": 1944,
+      "day": 27,
+      "month": 3,
+      "rectors": {
+        "2026": "María Ruth Hernández Martínez",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad ICESI",
+      "country": "Colombia",
+      "foundation_year": 1979,
+      "day": 13,
+      "month": 4,
+      "rectors": {
+        "2026": "Esteban Piedrahíta",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad del Sinú",
+      "country": "Colombia",
+      "foundation_year": 1974,
+      "day": 20,
+      "month": 4,
+      "rectors": {
+        "2026": "María Fátima Bechara Castilla",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad del Cauca",
+      "country": "Colombia",
+      "foundation_year": 1827,
+      "day": 24,
+      "month": 4,
+      "rectors": {
+        "2026": "Deibar René Hurtado Herrera",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Mariana",
+      "country": "Colombia",
+      "foundation_year": 1967,
+      "day": 2,
+      "month": 5,
+      "rectors": {
+        "2026": "Hna. Liliana Isabel Díaz Cabrera f.m.i.",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Cooperativa de Colombia - Nacional",
+      "country": "Colombia",
+      "foundation_year": 1958,
+      "day": 10,
+      "month": 5,
+      "rectors": {
+        "2026": "Maritza Rondón Rangel",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Córdoba",
+      "country": "Colombia",
+      "foundation_year": 1964,
+      "day": 13,
+      "month": 5,
+      "rectors": {
+        "2026": "Jairo Miguel Torres Oviedo",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad INCCA de Colombia",
+      "country": "Colombia",
+      "foundation_year": 1955,
+      "day": 15,
+      "month": 5,
+      "rectors": {
+        "2026": "Doris Andrea Sotelo Carreño",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Fundación Universidad Autónoma de Colombia",
+      "country": "Colombia",
+      "foundation_year": 1971,
+      "day": 20,
+      "month": 5,
+      "rectors": {
+        "2026": "Luis Carlos Guzmán Rodríguez",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Univ. de Ciencias Aplicadas y Ambientales - UDCA",
+      "country": "Colombia",
+      "foundation_year": 1983,
+      "day": 20,
+      "month": 5,
+      "rectors": {
+        "2026": "Manuel Esteban Acevedo Jaramillo",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de San Buenaventura",
+      "country": "Colombia",
+      "foundation_year": 1708,
+      "day": 23,
+      "month": 5,
+      "rectors": {
+        "2026": "Andrés Miguel Casaleth Faciolince",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Caldas",
+      "country": "Colombia",
+      "foundation_year": 1943,
+      "day": 24,
+      "month": 5,
+      "rectors": {
+        "2026": "Fabio Hernando Arias Orozco",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad La Gran Colombia - Bogotá",
+      "country": "Colombia",
+      "foundation_year": 1951,
+      "day": 24,
+      "month": 5,
+      "rectors": {
+        "2026": "Marco Tulio Calderón Peñaloza",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Investigación y Desarrollo UDI",
+      "country": "Colombia",
+      "foundation_year": 1982,
+      "day": 28,
+      "month": 5,
+      "rectors": {
+        "2026": "Jairo Augusto Castro Castro",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de los Pueblos Pastos y Quillasingas",
+      "country": "Colombia",
+      "foundation_year": 2023,
+      "day": 5,
+      "month": 6,
+      "rectors": {
+        "2026": "Ernesto Ramiro Estacio",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad CESMAG",
+      "country": "Colombia",
+      "foundation_year": 1982,
+      "day": 12,
+      "month": 6,
+      "rectors": {
+        "2026": "Luis Eduardo Rubiano Guáqueta",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Santo Tomás – Rector General",
+      "country": "Colombia",
+      "foundation_year": 1580,
+      "day": 13,
+      "month": 6,
+      "rectors": {
+        "2026": "Alvaro José Arango Restrepo O.P.",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad del Atlántico",
+      "country": "Colombia",
+      "foundation_year": 1946,
+      "day": 15,
+      "month": 6,
+      "rectors": {
+        "2026": "Rafael Castillo Pacheco",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Central",
       "country": "Colombia",
       "foundation_year": 1966,
@@ -80,6 +444,45 @@
       "month": 6,
       "rectors": {
         "2026": "Paula Andrea López",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Escuela Naval de Cadetes Almirante Padilla",
+      "country": "Colombia",
+      "foundation_year": 1935,
+      "day": 3,
+      "month": 7,
+      "rectors": {
+        "2026": "John Henry Ruiz Murcia",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad CES",
+      "country": "Colombia",
+      "foundation_year": 1977,
+      "day": 5,
+      "month": 7,
+      "rectors": {
+        "2026": "María Jael Arango Barreneche",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Francisco de Paula Santander - UFPS",
+      "country": "Colombia",
+      "foundation_year": 1962,
+      "day": 5,
+      "month": 7,
+      "rectors": {
+        "2026": "Sandra Ortega",
         "2027": "",
         "2028": ""
       },
@@ -112,6 +515,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad EIA",
+      "country": "Colombia",
+      "foundation_year": 1978,
+      "day": 12,
+      "month": 7,
+      "rectors": {
+        "2026": "Nathalia Vélez López de Mesa (e)",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Militar Nueva Granada",
       "country": "Colombia",
       "foundation_year": 1982,
@@ -119,6 +535,32 @@
       "month": 7,
       "rectors": {
         "2026": "Javier Alberto Ayala Amaya",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Autónoma del Caribe",
+      "country": "Colombia",
+      "foundation_year": 1967,
+      "day": 24,
+      "month": 7,
+      "rectors": {
+        "2026": "Silvia Gette Ponce",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Manizales",
+      "country": "Colombia",
+      "foundation_year": 1972,
+      "day": 24,
+      "month": 7,
+      "rectors": {
+        "2026": "Duván Emilio Ramírez",
         "2027": "",
         "2028": ""
       },
@@ -190,6 +632,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad Internacional del Trópico Americano",
+      "country": "Colombia",
+      "foundation_year": 2000,
+      "day": 12,
+      "month": 8,
+      "rectors": {
+        "2026": "Oriol Jiménez Silva",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Nacional de La Plata",
       "country": "Argentina",
       "foundation_year": 1905,
@@ -197,6 +652,19 @@
       "month": 8,
       "rectors": {
         "2026": "Fernando Tauber (Presidente)",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Autónoma de Bucaramanga - UNAB",
+      "country": "Colombia",
+      "foundation_year": 1982,
+      "day": 18,
+      "month": 8,
+      "rectors": {
+        "2026": "Juan Camilo Montoya Bozzi",
         "2027": "",
         "2028": ""
       },
@@ -262,6 +730,19 @@
       "month": 8,
       "rectors": {
         "2026": "Emilia Restrepo Gómez",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Los Llanos",
+      "country": "Colombia",
+      "foundation_year": 1974,
+      "day": 3,
+      "month": 9,
+      "rectors": {
+        "2026": "Charles Robin Arosa Carrera",
         "2027": "",
         "2028": ""
       },
@@ -359,6 +840,58 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad Pontificia Bolivariana - UPB",
+      "country": "Colombia",
+      "foundation_year": 1936,
+      "day": 15,
+      "month": 9,
+      "rectors": {
+        "2026": "Pbro. Diego Alonso Marulanda Díaz",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Autónoma Latinoamericana - UNAULA",
+      "country": "Colombia",
+      "foundation_year": 1966,
+      "day": 16,
+      "month": 9,
+      "rectors": {
+        "2026": "José Rodrigo Flórez Ruiz",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Autónoma de Manizales",
+      "country": "Colombia",
+      "foundation_year": 1979,
+      "day": 22,
+      "month": 9,
+      "rectors": {
+        "2026": "Carlos Eduardo Jaramillo",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Boyacá - Uniboyacá",
+      "country": "Colombia",
+      "foundation_year": 1979,
+      "day": 22,
+      "month": 9,
+      "rectors": {
+        "2026": "Sergio Andrés Correal Cuervo",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Nacional Autónoma de México",
       "country": "México",
       "foundation_year": 1910,
@@ -366,6 +899,19 @@
       "month": 9,
       "rectors": {
         "2026": "Leonardo Lomelí Vanegas",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Nacional de Colombia",
+      "country": "Colombia",
+      "foundation_year": 1867,
+      "day": 22,
+      "month": 9,
+      "rectors": {
+        "2026": "José Ismael Peña Reyes",
         "2027": "",
         "2028": ""
       },
@@ -528,6 +1074,32 @@
       "type": "Universidad"
     },
     {
+      "name": "Pontificia Universidad Javeriana - Cali",
+      "country": "Colombia",
+      "foundation_year": 1970,
+      "day": 6,
+      "month": 10,
+      "rectors": {
+        "2026": "Vicente Durán Casas",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Cartagena",
+      "country": "Colombia",
+      "foundation_year": 1827,
+      "day": 6,
+      "month": 10,
+      "rectors": {
+        "2026": "William Malkun Castillejo",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "El Colegio de México, A.C.",
       "country": "México",
       "foundation_year": 1940,
@@ -567,6 +1139,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad Pedagógica y Tecnológica - UPTC",
+      "country": "Colombia",
+      "foundation_year": 1953,
+      "day": 10,
+      "month": 10,
+      "rectors": {
+        "2026": "Enrique Vera López",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad EAN",
       "country": "Colombia",
       "foundation_year": 1967,
@@ -593,6 +1178,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad del Quindío",
+      "country": "Colombia",
+      "foundation_year": 1960,
+      "day": 14,
+      "month": 10,
+      "rectors": {
+        "2026": "Luis Fernando Polanía Obando",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Seoul National University",
       "country": "Corea del Sur",
       "foundation_year": 1946,
@@ -600,6 +1198,19 @@
       "month": 10,
       "rectors": {
         "2026": "",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Santiago de Cali",
+      "country": "Colombia",
+      "foundation_year": 1958,
+      "day": 16,
+      "month": 10,
+      "rectors": {
+        "2026": "Carlos Andrés Pérez Galindo",
         "2027": "",
         "2028": ""
       },
@@ -632,6 +1243,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad Escuela Colombiana de Ingeniería",
+      "country": "Colombia",
+      "foundation_year": 1972,
+      "day": 20,
+      "month": 10,
+      "rectors": {
+        "2026": "Myriam Astrid Angarita Gómez",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Princeton University",
       "country": "Estados Unidos",
       "foundation_year": 1746,
@@ -658,6 +1282,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad ECCI",
+      "country": "Colombia",
+      "foundation_year": 1978,
+      "day": 25,
+      "month": 10,
+      "rectors": {
+        "2026": "Fernando Arturo Soler López",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad de Talca",
       "country": "Chile",
       "foundation_year": 1981,
@@ -665,6 +1302,19 @@
       "month": 10,
       "rectors": {
         "2026": "",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad del Magdalena",
+      "country": "Colombia",
+      "foundation_year": 1962,
+      "day": 27,
+      "month": 10,
+      "rectors": {
+        "2026": "Pablo Hernán Vera Salazar",
         "2027": "",
         "2028": ""
       },
@@ -710,6 +1360,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad Autónoma Indígena Intercultural UAIIN",
+      "country": "Colombia",
+      "foundation_year": 2018,
+      "day": 2,
+      "month": 11,
+      "rectors": {
+        "2026": "Yaid Ferley Bolaños Díaz",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad de Antioquia",
       "country": "Colombia",
       "foundation_year": 1803,
@@ -736,6 +1399,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad de Nariño",
+      "country": "Colombia",
+      "foundation_year": 1904,
+      "day": 7,
+      "month": 11,
+      "rectors": {
+        "2026": "Martha Sofía González Insuasti",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Pontifícia Universidade Católica do Rio Grande do Sul",
       "country": "Brasil",
       "foundation_year": 1948,
@@ -749,6 +1425,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad Católica Luis Amigó",
+      "country": "Colombia",
+      "foundation_year": 1984,
+      "day": 9,
+      "month": 11,
+      "rectors": {
+        "2026": "Pbro. Carlos Enrique Cardona Quintero",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad de La Salle",
       "country": "Colombia",
       "foundation_year": 1964,
@@ -756,6 +1445,19 @@
       "month": 11,
       "rectors": {
         "2026": "José Alexander Santafé Andrade",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de La Costa",
+      "country": "Colombia",
+      "foundation_year": 1970,
+      "day": 16,
+      "month": 11,
+      "rectors": {
+        "2026": "Eduardo Alfonso Crissién Borrero",
         "2027": "",
         "2028": ""
       },
@@ -788,6 +1490,32 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad Metropolitana",
+      "country": "Colombia",
+      "foundation_year": 1973,
+      "day": 16,
+      "month": 11,
+      "rectors": {
+        "2026": "José Borré Aguilera",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Popular del Cesar",
+      "country": "Colombia",
+      "foundation_year": 1976,
+      "day": 19,
+      "month": 11,
+      "rectors": {
+        "2026": "Guillermo Andrés Echavarría Gil",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Instituto Tecnológico de Buenos Aires",
       "country": "Argentina",
       "foundation_year": 1959,
@@ -801,6 +1529,84 @@
       "type": "Instituto universitario"
     },
     {
+      "name": "Universidad de Pamplona",
+      "country": "Colombia",
+      "foundation_year": 1960,
+      "day": 23,
+      "month": 11,
+      "rectors": {
+        "2026": "Ivaldo Torres Chávez",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de La Guajira",
+      "country": "Colombia",
+      "foundation_year": 1976,
+      "day": 25,
+      "month": 11,
+      "rectors": {
+        "2026": "Carlos Arturo Robles Julio",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Católica de Pereira",
+      "country": "Colombia",
+      "foundation_year": 1972,
+      "day": 6,
+      "month": 12,
+      "rectors": {
+        "2026": "Behitman Alberto Céspedes De los Ríos",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de La Amazonía",
+      "country": "Colombia",
+      "foundation_year": 1971,
+      "day": 13,
+      "month": 12,
+      "rectors": {
+        "2026": "Fausto Andrés Ortiz Morea",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Tecnológica del Chocó - D.L.C.",
+      "country": "Colombia",
+      "foundation_year": 1968,
+      "day": 13,
+      "month": 12,
+      "rectors": {
+        "2026": "Héctor Aurelio Mosquera Mosquera",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad del Pacífico",
+      "country": "Colombia",
+      "foundation_year": 1988,
+      "day": 14,
+      "month": 12,
+      "rectors": {
+        "2026": "Edinson Caicedo Cerezo",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad del Rosario",
       "country": "Colombia",
       "foundation_year": 1653,
@@ -808,6 +1614,32 @@
       "month": 12,
       "rectors": {
         "2026": "Ana Isabel Gómez Córdoba / Stéphanie Lavaux",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Cundinamarca - UDEC",
+      "country": "Colombia",
+      "foundation_year": 1969,
+      "day": 19,
+      "month": 12,
+      "rectors": {
+        "2026": "Adriano Muñoz Barrera",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Santander - UDES",
+      "country": "Colombia",
+      "foundation_year": 1982,
+      "day": 21,
+      "month": 12,
+      "rectors": {
+        "2026": "Patricio López Jaramillo",
         "2027": "",
         "2028": ""
       },

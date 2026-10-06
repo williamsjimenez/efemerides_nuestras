@@ -191,6 +191,7 @@ async def main() -> None:
         xlsx = Path(td) / EXCEL_NAME
         _download_direct_onedrive(xlsx)
         payload = build_json(xlsx)
+        print(f"Fuente OneDrive descargada: {len(payload['institutions'])} registros válidos.")
 
     # Preserve a stable file when no data changed. This allows the workflow to
     # poll frequently without generating empty commits.

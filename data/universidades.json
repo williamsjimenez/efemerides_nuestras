@@ -2,11 +2,193 @@
   "meta": {
     "title": "Efemérides universitarias",
     "source": "Repositorio_Maestro_Efemerides_Universitarias.xlsx",
-    "records": 127,
+    "records": 219,
     "synced_from_onedrive": true,
-    "last_sync_utc": "2026-10-06T01:48:50+00:00"
+    "last_sync_utc": "2026-10-06T15:46:03+00:00"
   },
   "institutions": [
+    {
+      "name": "City University of Hong Kong",
+      "country": "China",
+      "foundation_year": 1984,
+      "day": 1,
+      "month": 1,
+      "rectors": {
+        "2026": "Freddy Boey",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Duke University",
+      "country": "Estados Unidos",
+      "foundation_year": 1838,
+      "day": 1,
+      "month": 1,
+      "rectors": {
+        "2026": "Vincent E. Price",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "KTH Royal Institute of Technology",
+      "country": "Suecia",
+      "foundation_year": 1827,
+      "day": 1,
+      "month": 1,
+      "rectors": {
+        "2026": "Anders Söderholm",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Instituto universitario"
+    },
+    {
+      "name": "National Taiwan University (NTU)",
+      "country": "Taiwán",
+      "foundation_year": 1928,
+      "day": 1,
+      "month": 1,
+      "rectors": {
+        "2026": "Wen-Chang Chen",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Sorbonne University",
+      "country": "Francia",
+      "foundation_year": 2018,
+      "day": 1,
+      "month": 1,
+      "rectors": {
+        "2026": "Nathalie Drach-Temam",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The Hong Kong Polytechnic University",
+      "country": "China",
+      "foundation_year": 1937,
+      "day": 1,
+      "month": 1,
+      "rectors": {
+        "2026": "Teng Jin-Guang",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The University of Nottingham",
+      "country": "Reino Unido",
+      "foundation_year": 1881,
+      "day": 1,
+      "month": 1,
+      "rectors": {
+        "2026": "Shearer West",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The University of Warwick",
+      "country": "Reino Unido",
+      "foundation_year": 1965,
+      "day": 1,
+      "month": 1,
+      "rectors": {
+        "2026": "Stuart Croft",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universiti Malaya (UM)",
+      "country": "Malasia",
+      "foundation_year": 1949,
+      "day": 1,
+      "month": 1,
+      "rectors": {
+        "2026": "Noor Azuan Abu Osman",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "University of Alberta",
+      "country": "Canadá",
+      "foundation_year": 1908,
+      "day": 1,
+      "month": 1,
+      "rectors": {
+        "2026": "Bill Flanagan",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "University of Glasgow",
+      "country": "Reino Unido",
+      "foundation_year": 1451,
+      "day": 1,
+      "month": 1,
+      "rectors": {
+        "2026": "Anton Muscatelli",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Delft University of Technology",
+      "country": "Países Bajos",
+      "foundation_year": 1842,
+      "day": 8,
+      "month": 1,
+      "rectors": {
+        "2026": "Tim van der Hagen",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The University of Amsterdam",
+      "country": "Países Bajos",
+      "foundation_year": 1632,
+      "day": 8,
+      "month": 1,
+      "rectors": {
+        "2026": "Geert ten Dam",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The University of Melbourne",
+      "country": "Australia",
+      "foundation_year": 1853,
+      "day": 22,
+      "month": 1,
+      "rectors": {
+        "2026": "Duncan Maskell",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
     {
       "name": "Universidad del Norte",
       "country": "Colombia",
@@ -15,6 +197,32 @@
       "month": 1,
       "rectors": {
         "2026": "Adolfo Meisel Roca",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "University of Technology Sydney (UTS)",
+      "country": "Australia",
+      "foundation_year": 1988,
+      "day": 26,
+      "month": 1,
+      "rectors": {
+        "2026": "Andrew Parfitt",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Northwestern University",
+      "country": "Estados Unidos",
+      "foundation_year": 1851,
+      "day": 28,
+      "month": 1,
+      "rectors": {
+        "2026": "Michael Schill",
         "2027": "",
         "2028": ""
       },
@@ -60,6 +268,32 @@
       "type": "Universidad"
     },
     {
+      "name": "EPFL (École Polytechnique Fédérale de Lausanne)",
+      "country": "Suiza",
+      "foundation_year": 1853,
+      "day": 7,
+      "month": 2,
+      "rectors": {
+        "2026": "Martin Vetterli",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Instituto universitario"
+    },
+    {
+      "name": "ETH Zurich",
+      "country": "Suiza",
+      "foundation_year": 1854,
+      "day": 7,
+      "month": 2,
+      "rectors": {
+        "2026": "Joël Mesot",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Instituto universitario"
+    },
+    {
       "name": "Universidad Pedagógica Nacional",
       "country": "Colombia",
       "foundation_year": 1955,
@@ -67,6 +301,19 @@
       "month": 2,
       "rectors": {
         "2026": "Helberth Choachí González",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "UCL (University College London)",
+      "country": "Reino Unido",
+      "foundation_year": 1826,
+      "day": 11,
+      "month": 2,
+      "rectors": {
+        "2026": "Michael Spence",
         "2027": "",
         "2028": ""
       },
@@ -99,6 +346,19 @@
       "type": "Universidad"
     },
     {
+      "name": "The University of Western Australia",
+      "country": "Australia",
+      "foundation_year": 1911,
+      "day": 12,
+      "month": 2,
+      "rectors": {
+        "2026": "Amit Chakma",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Libre",
       "country": "Colombia",
       "foundation_year": 1923,
@@ -119,6 +379,84 @@
       "month": 2,
       "rectors": {
         "2026": "Hernando Parra Nieto",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Johns Hopkins University",
+      "country": "Estados Unidos",
+      "foundation_year": 1876,
+      "day": 22,
+      "month": 2,
+      "rectors": {
+        "2026": "Ronald J. Daniels",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Pennsylvania State University",
+      "country": "Estados Unidos",
+      "foundation_year": 1855,
+      "day": 22,
+      "month": 2,
+      "rectors": {
+        "2026": "Neeli Bendapudi",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Uppsala University",
+      "country": "Suecia",
+      "foundation_year": 1477,
+      "day": 27,
+      "month": 2,
+      "rectors": {
+        "2026": "Anders Hagfeldt",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "University of Illinois at Urbana-Champaign",
+      "country": "Estados Unidos",
+      "foundation_year": 1867,
+      "day": 28,
+      "month": 2,
+      "rectors": {
+        "2026": "Robert J. Jones",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Brown University",
+      "country": "Estados Unidos",
+      "foundation_year": 1764,
+      "day": 3,
+      "month": 3,
+      "rectors": {
+        "2026": "Christina H. Paxson",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Trinity College Dublin",
+      "country": "Irlanda",
+      "foundation_year": 1592,
+      "day": 3,
+      "month": 3,
+      "rectors": {
+        "2026": "Linda Doyle",
         "2027": "",
         "2028": ""
       },
@@ -164,6 +502,19 @@
       "type": "Universidad"
     },
     {
+      "name": "University of British Columbia",
+      "country": "Canadá",
+      "foundation_year": 1908,
+      "day": 7,
+      "month": 3,
+      "rectors": {
+        "2026": "Benoit-Antoine Bacon",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad del Tolima",
       "country": "Colombia",
       "foundation_year": 1945,
@@ -177,6 +528,19 @@
       "type": "Universidad"
     },
     {
+      "name": "University of Toronto",
+      "country": "Canadá",
+      "foundation_year": 1827,
+      "day": 15,
+      "month": 3,
+      "rectors": {
+        "2026": "Meric Gertler",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Simón Bolívar",
       "country": "Colombia",
       "foundation_year": 1972,
@@ -184,6 +548,32 @@
       "month": 3,
       "rectors": {
         "2026": "José Eusebio Consuegra Bolívar",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "UC Berkeley (University of California,   Berkeley)",
+      "country": "Estados Unidos",
+      "foundation_year": 1868,
+      "day": 23,
+      "month": 3,
+      "rectors": {
+        "2026": "Richard Lyons",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "University of Birmingham",
+      "country": "Reino Unido",
+      "foundation_year": 1900,
+      "day": 24,
+      "month": 3,
+      "rectors": {
+        "2026": "Adam Tickell",
         "2027": "",
         "2028": ""
       },
@@ -216,6 +606,97 @@
       "type": "Universidad"
     },
     {
+      "name": "The University of Hong Kong (HKU)",
+      "country": "China",
+      "foundation_year": 1911,
+      "day": 30,
+      "month": 3,
+      "rectors": {
+        "2026": "Xiang Zhang",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "McGill University",
+      "country": "Canadá",
+      "foundation_year": 1821,
+      "day": 31,
+      "month": 3,
+      "rectors": {
+        "2026": "Deep Saini",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Shanghai Jiao Tong University",
+      "country": "China",
+      "foundation_year": 1896,
+      "day": 8,
+      "month": 4,
+      "rectors": {
+        "2026": "Ding Kuiling",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Massachusetts Institute of Technology (MIT)",
+      "country": "Estados Unidos",
+      "foundation_year": 1861,
+      "day": 10,
+      "month": 4,
+      "rectors": {
+        "2026": "Sally Kornbluth",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Instituto universitario"
+    },
+    {
+      "name": "Yonsei University",
+      "country": "Corea del Sur",
+      "foundation_year": 1885,
+      "day": 10,
+      "month": 4,
+      "rectors": {
+        "2026": "Dong-Sup Yoon",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Technical University of Munich (TUM)",
+      "country": "Alemania",
+      "foundation_year": 1868,
+      "day": 12,
+      "month": 4,
+      "rectors": {
+        "2026": "Thomas F. Hofmann",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The University of Tokyo",
+      "country": "Japón",
+      "foundation_year": 1877,
+      "day": 12,
+      "month": 4,
+      "rectors": {
+        "2026": "Teruo Fujii",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad ICESI",
       "country": "Colombia",
       "foundation_year": 1979,
@@ -223,6 +704,58 @@
       "month": 4,
       "rectors": {
         "2026": "Esteban Piedrahíta",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The University of Edinburgh",
+      "country": "Reino Unido",
+      "foundation_year": 1582,
+      "day": 14,
+      "month": 4,
+      "rectors": {
+        "2026": "Peter Mathieson",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Monash University",
+      "country": "Australia",
+      "foundation_year": 1958,
+      "day": 15,
+      "month": 4,
+      "rectors": {
+        "2026": "Sharon Pickering",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "PSL University (Paris Sciences et Lettres)",
+      "country": "Francia",
+      "foundation_year": 2010,
+      "day": 15,
+      "month": 4,
+      "rectors": {
+        "2026": "Alain Fuchs",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "New York University (NYU)",
+      "country": "Estados Unidos",
+      "foundation_year": 1831,
+      "day": 18,
+      "month": 4,
+      "rectors": {
+        "2026": "Linda G. Mills",
         "2027": "",
         "2028": ""
       },
@@ -242,6 +775,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Boston University",
+      "country": "Estados Unidos",
+      "foundation_year": 1839,
+      "day": 24,
+      "month": 4,
+      "rectors": {
+        "2026": "Melissa L. Gilliam",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad del Cauca",
       "country": "Colombia",
       "foundation_year": 1827,
@@ -255,6 +801,84 @@
       "type": "Universidad"
     },
     {
+      "name": "University of Leeds",
+      "country": "Reino Unido",
+      "foundation_year": 1904,
+      "day": 25,
+      "month": 4,
+      "rectors": {
+        "2026": "Hai-Sui Yu",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Cornell University",
+      "country": "Estados Unidos",
+      "foundation_year": 1865,
+      "day": 27,
+      "month": 4,
+      "rectors": {
+        "2026": "Martha E. Pollack",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Tsinghua University",
+      "country": "China",
+      "foundation_year": 1911,
+      "day": 29,
+      "month": 4,
+      "rectors": {
+        "2026": "Li Luming",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "University of Southampton",
+      "country": "Reino Unido",
+      "foundation_year": 1952,
+      "day": 29,
+      "month": 4,
+      "rectors": {
+        "2026": "Mark E. Smith",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "University of Zurich (UZH)",
+      "country": "Suiza",
+      "foundation_year": 1833,
+      "day": 29,
+      "month": 4,
+      "rectors": {
+        "2026": "Michael Schaepman",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The University of Osaka",
+      "country": "Japón",
+      "foundation_year": 1931,
+      "day": 1,
+      "month": 5,
+      "rectors": {
+        "2026": "Shojiro Nishio",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Mariana",
       "country": "Colombia",
       "foundation_year": 1967,
@@ -262,6 +886,32 @@
       "month": 5,
       "rectors": {
         "2026": "Hna. Liliana Isabel Díaz Cabrera f.m.i.",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Korea University",
+      "country": "Corea del Sur",
+      "foundation_year": 1905,
+      "day": 5,
+      "month": 5,
+      "rectors": {
+        "2026": "Dong-One Kim",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Purdue University",
+      "country": "Estados Unidos",
+      "foundation_year": 1869,
+      "day": 6,
+      "month": 5,
+      "rectors": {
+        "2026": "Mung Chiang",
         "2027": "",
         "2028": ""
       },
@@ -333,6 +983,45 @@
       "type": "Universidad"
     },
     {
+      "name": "Zhejiang University",
+      "country": "China",
+      "foundation_year": 1897,
+      "day": 21,
+      "month": 5,
+      "rectors": {
+        "2026": "Du Jiangfeng",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The University of Auckland",
+      "country": "Nueva Zelanda",
+      "foundation_year": 1883,
+      "day": 23,
+      "month": 5,
+      "rectors": {
+        "2026": "Dawn Freshwater",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "UCLA (University of California, Los Angeles)",
+      "country": "Estados Unidos",
+      "foundation_year": 1919,
+      "day": 23,
+      "month": 5,
+      "rectors": {
+        "2026": "Gene D. Block",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad de San Buenaventura",
       "country": "Colombia",
       "foundation_year": 1708,
@@ -372,6 +1061,32 @@
       "type": "Universidad"
     },
     {
+      "name": "University of Bristol",
+      "country": "Reino Unido",
+      "foundation_year": 1909,
+      "day": 24,
+      "month": 5,
+      "rectors": {
+        "2026": "Evelyn Welch",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Tokyo Institute of Technology",
+      "country": "Japón",
+      "foundation_year": 1881,
+      "day": 26,
+      "month": 5,
+      "rectors": {
+        "2026": "Kazuya Masu",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Instituto universitario"
+    },
+    {
       "name": "Universidad de Investigación y Desarrollo UDI",
       "country": "Colombia",
       "foundation_year": 1982,
@@ -379,6 +1094,45 @@
       "month": 5,
       "rectors": {
         "2026": "Jairo Augusto Castro Castro",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Institut Polytechnique de Paris",
+      "country": "Francia",
+      "foundation_year": 2019,
+      "day": 31,
+      "month": 5,
+      "rectors": {
+        "2026": "Thierry Coulhon",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Instituto universitario"
+    },
+    {
+      "name": "The University of Sheffield",
+      "country": "Reino Unido",
+      "foundation_year": 1905,
+      "day": 31,
+      "month": 5,
+      "rectors": {
+        "2026": "Koen Lamberts",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Durham University",
+      "country": "Reino Unido",
+      "foundation_year": 1832,
+      "day": 1,
+      "month": 6,
+      "rectors": {
+        "2026": "Karen O'Brien",
         "2027": "",
         "2028": ""
       },
@@ -450,6 +1204,32 @@
       "type": "Universidad"
     },
     {
+      "name": "Kyoto University",
+      "country": "Japón",
+      "foundation_year": 1897,
+      "day": 18,
+      "month": 6,
+      "rectors": {
+        "2026": "Nagahiro Minato",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Ludwig-Maximilians-Universität München",
+      "country": "Alemania",
+      "foundation_year": 1472,
+      "day": 26,
+      "month": 6,
+      "rectors": {
+        "2026": "Bernd Huber",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Central",
       "country": "Colombia",
       "foundation_year": 1966,
@@ -463,6 +1243,19 @@
       "type": "Universidad"
     },
     {
+      "name": "University of New South Wales (UNSW)",
+      "country": "Australia",
+      "foundation_year": 1949,
+      "day": 1,
+      "month": 7,
+      "rectors": {
+        "2026": "Attila Brungs",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Escuela Naval de Cadetes Almirante Padilla",
       "country": "Colombia",
       "foundation_year": 1935,
@@ -470,6 +1263,19 @@
       "month": 7,
       "rectors": {
         "2026": "John Henry Ruiz Murcia",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Peking University",
+      "country": "China",
+      "foundation_year": 1898,
+      "day": 3,
+      "month": 7,
+      "rectors": {
+        "2026": "Gong Qihuang",
         "2027": "",
         "2028": ""
       },
@@ -522,6 +1328,19 @@
       "month": 7,
       "rectors": {
         "2026": "Jaime Alberto Leal Afanador",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Imperial College London",
+      "country": "Reino Unido",
+      "foundation_year": 1907,
+      "day": 8,
+      "month": 7,
+      "rectors": {
+        "2026": "Hugh Brady",
         "2027": "",
         "2028": ""
       },
@@ -593,6 +1412,32 @@
       "type": "Universidad"
     },
     {
+      "name": "Australian National University (ANU)",
+      "country": "Australia",
+      "foundation_year": 1946,
+      "day": 1,
+      "month": 8,
+      "rectors": {
+        "2026": "Genevieve Bell",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Nanyang Technological University (NTU)",
+      "country": "Singapur",
+      "foundation_year": 1981,
+      "day": 1,
+      "month": 8,
+      "rectors": {
+        "2026": "Ho Teck Hua",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad EAN",
       "country": "Colombia",
       "foundation_year": 1967,
@@ -626,6 +1471,19 @@
       "month": 8,
       "rectors": {
         "2026": "José Andelfo Lizcano Caro",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "National University of Singapore (NUS)",
+      "country": "Singapur",
+      "foundation_year": 1905,
+      "day": 8,
+      "month": 8,
+      "rectors": {
+        "2026": "Tan Eng Chye",
         "2027": "",
         "2028": ""
       },
@@ -684,6 +1542,19 @@
       "type": "Universidad"
     },
     {
+      "name": "King's College London",
+      "country": "Reino Unido",
+      "foundation_year": 1829,
+      "day": 14,
+      "month": 8,
+      "rectors": {
+        "2026": "Shitij Kapur",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Autónoma de Bucaramanga - UNAB",
       "country": "Colombia",
       "foundation_year": 1982,
@@ -717,6 +1588,19 @@
       "month": 8,
       "rectors": {
         "2026": "Vidal Serrano Nunes Júnior",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "University of Michigan-Ann Arbor",
+      "country": "Estados Unidos",
+      "foundation_year": 1817,
+      "day": 26,
+      "month": 8,
+      "rectors": {
+        "2026": "Santa J. Ono",
         "2027": "",
         "2028": ""
       },
@@ -866,6 +1750,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Fudan University",
+      "country": "China",
+      "foundation_year": 1905,
+      "day": 14,
+      "month": 9,
+      "rectors": {
+        "2026": "Jin Li",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Piloto de Colombia",
       "country": "Colombia",
       "foundation_year": 1962,
@@ -886,6 +1783,19 @@
       "month": 9,
       "rectors": {
         "2026": "Pbro. Diego Alonso Marulanda Díaz",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "University of Texas at Austin",
+      "country": "Estados Unidos",
+      "foundation_year": 1883,
+      "day": 15,
+      "month": 9,
+      "rectors": {
+        "2026": "Jay Hartzell",
         "2027": "",
         "2028": ""
       },
@@ -970,6 +1880,19 @@
       "type": "Unión universitaria"
     },
     {
+      "name": "King Fahd University of Petroleum &   Minerals",
+      "country": "Arabia Saudita",
+      "foundation_year": 1963,
+      "day": 23,
+      "month": 9,
+      "rectors": {
+        "2026": "Muhammad M. Al-Saggaf",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Autónoma de Nuevo León",
       "country": "México",
       "foundation_year": 1933,
@@ -1009,6 +1932,19 @@
       "type": "Universidad"
     },
     {
+      "name": "London School of Economics and Political   Science (LSE)",
+      "country": "Reino Unido",
+      "foundation_year": 1895,
+      "day": 1,
+      "month": 10,
+      "rectors": {
+        "2026": "Dr. Larry Kramer",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Pontificia Universidad Javeriana",
       "country": "Colombia",
       "foundation_year": 1930,
@@ -1016,6 +1952,19 @@
       "month": 10,
       "rectors": {
         "2026": "Luis Fernando Múnera Congote",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The University of Chicago",
+      "country": "Estados Unidos",
+      "foundation_year": 1890,
+      "day": 1,
+      "month": 10,
+      "rectors": {
+        "2026": "Dr. Paul Alivisatos",
         "2027": "",
         "2028": ""
       },
@@ -1055,6 +2004,32 @@
       "month": 10,
       "rectors": {
         "2026": "Johnny Alberto Avendaño Estrada",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "University of Cambridge",
+      "country": "Reino Unido",
+      "foundation_year": 1209,
+      "day": 1,
+      "month": 10,
+      "rectors": {
+        "2026": "Dr. Chris Smith",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "University of Oxford",
+      "country": "Reino Unido",
+      "foundation_year": 1096,
+      "day": 1,
+      "month": 10,
+      "rectors": {
+        "2026": "Lord Hague of Richmond",
         "2027": "",
         "2028": ""
       },
@@ -1137,6 +2112,19 @@
         "2028": ""
       },
       "type": "Universidad"
+    },
+    {
+      "name": "Karlsruhe Institute of Technology (KIT)",
+      "country": "Alemania",
+      "foundation_year": 1825,
+      "day": 7,
+      "month": 10,
+      "rectors": {
+        "2026": "Dr. Jan S. Hesthaven",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Instituto universitario"
     },
     {
       "name": "El Colegio de México, A.C.",
@@ -1269,6 +2257,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universität Heidelberg",
+      "country": "Alemania",
+      "foundation_year": 1386,
+      "day": 19,
+      "month": 10,
+      "rectors": {
+        "2026": "Prof. Dr. Frauke Melchior",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Escuela Colombiana de Ingeniería",
       "country": "Colombia",
       "foundation_year": 1972,
@@ -1289,6 +2290,19 @@
       "month": 10,
       "rectors": {
         "2026": "Dr. Christopher L. Eisgruber",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The University of Manchester",
+      "country": "Reino Unido",
+      "foundation_year": 2004,
+      "day": 22,
+      "month": 10,
+      "rectors": {
+        "2026": "Prof. Duncan Ivison",
         "2027": "",
         "2028": ""
       },
@@ -1386,6 +2400,32 @@
       "type": "Universidad"
     },
     {
+      "name": "Columbia University",
+      "country": "Estados Unidos",
+      "foundation_year": 1754,
+      "day": 31,
+      "month": 10,
+      "rectors": {
+        "2026": "Prof. Dr. Jennifer L. Mnookin",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Caltech (California Institute of Technology)",
+      "country": "Estados Unidos",
+      "foundation_year": 1891,
+      "day": 2,
+      "month": 11,
+      "rectors": {
+        "2026": "Thomas F. Rosenbaum",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Instituto universitario"
+    },
+    {
       "name": "Universidad Autónoma Indígena Intercultural UAIIN",
       "country": "Colombia",
       "foundation_year": 2018,
@@ -1425,6 +2465,32 @@
       "type": "Universidad"
     },
     {
+      "name": "University of Washington",
+      "country": "Estados Unidos",
+      "foundation_year": 1861,
+      "day": 4,
+      "month": 11,
+      "rectors": {
+        "2026": "Ana Mari Cauce",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The University of Adelaide",
+      "country": "Australia",
+      "foundation_year": 1874,
+      "day": 6,
+      "month": 11,
+      "rectors": {
+        "2026": "Peter Høj",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad de Nariño",
       "country": "Colombia",
       "foundation_year": 1904,
@@ -1458,6 +2524,45 @@
       "month": 11,
       "rectors": {
         "2026": "Pbro. Carlos Enrique Cardona Quintero",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Stanford University",
+      "country": "Estados Unidos",
+      "foundation_year": 1885,
+      "day": 11,
+      "month": 11,
+      "rectors": {
+        "2026": "Jonathan Levin",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "University of Pennsylvania",
+      "country": "Estados Unidos",
+      "foundation_year": 1740,
+      "day": 14,
+      "month": 11,
+      "rectors": {
+        "2026": "J. Larry Jameson",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Carnegie Mellon University",
+      "country": "Estados Unidos",
+      "foundation_year": 1900,
+      "day": 15,
+      "month": 11,
+      "rectors": {
+        "2026": "Farnam Jahanian",
         "2027": "",
         "2028": ""
       },
@@ -1516,6 +2621,19 @@
       "type": "Universidad"
     },
     {
+      "name": "University of California, San Diego (UCSD)",
+      "country": "Estados Unidos",
+      "foundation_year": 1960,
+      "day": 18,
+      "month": 11,
+      "rectors": {
+        "2026": "Pradeep K. Khosla",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Popular del Cesar",
       "country": "Colombia",
       "foundation_year": 1976,
@@ -1568,6 +2686,32 @@
       "type": "Universidad"
     },
     {
+      "name": "Politecnico di Milano",
+      "country": "Italia",
+      "foundation_year": 1863,
+      "day": 29,
+      "month": 11,
+      "rectors": {
+        "2026": "Donatella Sciuto",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Freie Universität Berlin",
+      "country": "Alemania",
+      "foundation_year": 1948,
+      "day": 4,
+      "month": 12,
+      "rectors": {
+        "2026": "Günter M. Ziegler",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Católica de Pereira",
       "country": "Colombia",
       "foundation_year": 1972,
@@ -1575,6 +2719,32 @@
       "month": 12,
       "rectors": {
         "2026": "Behitman Alberto Céspedes De los Ríos",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "KU Leuven",
+      "country": "Bélgica",
+      "foundation_year": 1425,
+      "day": 9,
+      "month": 12,
+      "rectors": {
+        "2026": "Luc Sels",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The University of Queensland",
+      "country": "Australia",
+      "foundation_year": 1909,
+      "day": 10,
+      "month": 12,
+      "rectors": {
+        "2026": "Deborah Terry",
         "2027": "",
         "2028": ""
       },
@@ -1633,6 +2803,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Lund University",
+      "country": "Suecia",
+      "foundation_year": 1666,
+      "day": 19,
+      "month": 12,
+      "rectors": {
+        "2026": "Erik Renström",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad de Cundinamarca - UDEC",
       "country": "Colombia",
       "foundation_year": 1969,
@@ -1653,6 +2836,19 @@
       "month": 12,
       "rectors": {
         "2026": "Patricio López Jaramillo",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Paris-Saclay University",
+      "country": "Francia",
+      "foundation_year": 2014,
+      "day": 29,
+      "month": 12,
+      "rectors": {
+        "2026": "Estelle Iacona",
         "2027": "",
         "2028": ""
       },

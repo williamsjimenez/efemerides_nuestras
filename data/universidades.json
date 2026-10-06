@@ -2,9 +2,9 @@
   "meta": {
     "title": "Efemérides universitarias",
     "source": "Repositorio_Maestro_Efemerides_Universitarias.xlsx",
-    "records": 126,
+    "records": 127,
     "synced_from_onedrive": true,
-    "last_sync_utc": "2026-10-05T21:18:42+00:00"
+    "last_sync_utc": "2026-10-06T01:48:50+00:00"
   },
   "institutions": [
     {
@@ -385,6 +385,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad de América",
+      "country": "Colombia",
+      "foundation_year": 1956,
+      "day": 2,
+      "month": 6,
+      "rectors": {
+        "2026": "Dr. Mario Posada García‑Peña",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad de los Pueblos Pastos y Quillasingas",
       "country": "Colombia",
       "foundation_year": 2023,
@@ -580,6 +593,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad EAN",
+      "country": "Colombia",
+      "foundation_year": 1967,
+      "day": 1,
+      "month": 8,
+      "rectors": {
+        "2026": "Dra. Brigitte Baptiste",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Tecnológica de Bolívar",
       "country": "Colombia",
       "foundation_year": 1970,
@@ -730,6 +756,19 @@
       "month": 8,
       "rectors": {
         "2026": "Emilia Restrepo Gómez",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Santiago de Cali",
+      "country": "Colombia",
+      "foundation_year": 1958,
+      "day": 2,
+      "month": 9,
+      "rectors": {
+        "2026": "Dr. Carlos Andrés Pérez Galindo",
         "2027": "",
         "2028": ""
       },
@@ -1080,7 +1119,7 @@
       "day": 6,
       "month": 10,
       "rectors": {
-        "2026": "Vicente Durán Casas",
+        "2026": "Dr. Vicente Durán Casas",
         "2027": "",
         "2028": ""
       },
@@ -1093,7 +1132,7 @@
       "day": 6,
       "month": 10,
       "rectors": {
-        "2026": "William Malkun Castillejo",
+        "2026": "Dr. William Malkun Castillejo",
         "2027": "",
         "2028": ""
       },
@@ -1106,7 +1145,20 @@
       "day": 8,
       "month": 10,
       "rectors": {
-        "2026": "",
+        "2026": "Dra. Ana Covarrubias Velasco",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad de Guadalajara (UDG)",
+      "country": "México",
+      "foundation_year": 1925,
+      "day": 9,
+      "month": 10,
+      "rectors": {
+        "2026": "Dra. Karla Alejandrina Planter Pérez",
         "2027": "",
         "2028": ""
       },
@@ -1119,7 +1171,7 @@
       "day": 9,
       "month": 10,
       "rectors": {
-        "2026": "",
+        "2026": "Dr. Marcelo Alfredo Aba",
         "2027": "",
         "2028": ""
       },
@@ -1132,7 +1184,20 @@
       "day": 9,
       "month": 10,
       "rectors": {
-        "2026": "",
+        "2026": "Dr. Maurie McInnis",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "The Hong Kong University of Science and Technology",
+      "country": "China",
+      "foundation_year": 1991,
+      "day": 10,
+      "month": 10,
+      "rectors": {
+        "2026": "Prof.Dr. Lionel M. NI",
         "2027": "",
         "2028": ""
       },
@@ -1145,33 +1210,7 @@
       "day": 10,
       "month": 10,
       "rectors": {
-        "2026": "Enrique Vera López",
-        "2027": "",
-        "2028": ""
-      },
-      "type": "Universidad"
-    },
-    {
-      "name": "Universidad EAN",
-      "country": "Colombia",
-      "foundation_year": 1967,
-      "day": 11,
-      "month": 10,
-      "rectors": {
-        "2026": "",
-        "2027": "",
-        "2028": ""
-      },
-      "type": "Universidad"
-    },
-    {
-      "name": "Universidad de Guadalajara (UDG)",
-      "country": "México",
-      "foundation_year": 1925,
-      "day": 12,
-      "month": 10,
-      "rectors": {
-        "2026": "",
+        "2026": "Dr. Enrique Vera López",
         "2027": "",
         "2028": ""
       },
@@ -1197,20 +1236,7 @@
       "day": 15,
       "month": 10,
       "rectors": {
-        "2026": "",
-        "2027": "",
-        "2028": ""
-      },
-      "type": "Universidad"
-    },
-    {
-      "name": "Universidad Santiago de Cali",
-      "country": "Colombia",
-      "foundation_year": 1958,
-      "day": 16,
-      "month": 10,
-      "rectors": {
-        "2026": "Carlos Andrés Pérez Galindo",
+        "2026": "Dr. Luis Fernando Polanía Obando",
         "2027": "",
         "2028": ""
       },
@@ -1223,7 +1249,7 @@
       "day": 17,
       "month": 10,
       "rectors": {
-        "2026": "",
+        "2026": "The Honourable John LEE Ka-chiu",
         "2027": "",
         "2028": ""
       },
@@ -1236,7 +1262,7 @@
       "day": 17,
       "month": 10,
       "rectors": {
-        "2026": "",
+        "2026": "Prof. Laura Rita Tarabella",
         "2027": "",
         "2028": ""
       },
@@ -1249,7 +1275,7 @@
       "day": 20,
       "month": 10,
       "rectors": {
-        "2026": "Myriam Astrid Angarita Gómez",
+        "2026": "Prof. Myriam Astrid Angarita Gómez",
         "2027": "",
         "2028": ""
       },
@@ -1262,7 +1288,7 @@
       "day": 22,
       "month": 10,
       "rectors": {
-        "2026": "",
+        "2026": "Dr. Christopher L. Eisgruber",
         "2027": "",
         "2028": ""
       },
@@ -1275,7 +1301,7 @@
       "day": 24,
       "month": 10,
       "rectors": {
-        "2026": "Julio Castro Sepúlveda",
+        "2026": "Prof. Julio Castro Sepúlveda",
         "2027": "",
         "2028": ""
       },
@@ -1284,11 +1310,11 @@
     {
       "name": "Universidad ECCI",
       "country": "Colombia",
-      "foundation_year": 1978,
+      "foundation_year": 1977,
       "day": 25,
       "month": 10,
       "rectors": {
-        "2026": "Fernando Arturo Soler López",
+        "2026": "Dr. Fernando Arturo Soler López",
         "2027": "",
         "2028": ""
       },
@@ -1301,7 +1327,7 @@
       "day": 26,
       "month": 10,
       "rectors": {
-        "2026": "",
+        "2026": "Dr. Arcadio Cerda Urrutia",
         "2027": "",
         "2028": ""
       },
@@ -1310,11 +1336,11 @@
     {
       "name": "Universidad del Magdalena",
       "country": "Colombia",
-      "foundation_year": 1962,
+      "foundation_year": 1958,
       "day": 27,
       "month": 10,
       "rectors": {
-        "2026": "Pablo Hernán Vera Salazar",
+        "2026": "Dr. Pablo Hernán Vera Salazar",
         "2027": "",
         "2028": ""
       },
@@ -1327,7 +1353,7 @@
       "day": 28,
       "month": 10,
       "rectors": {
-        "2026": "",
+        "2026": "Dr. Alan M. Garber",
         "2027": "",
         "2028": ""
       },
@@ -1353,7 +1379,7 @@
       "day": 30,
       "month": 10,
       "rectors": {
-        "2026": "Anderson Antonio Pedroso, S.J.",
+        "2026": "Fr. Anderson Antonio Pedroso, S.J.",
         "2027": "",
         "2028": ""
       },
@@ -1471,19 +1497,6 @@
       "month": 11,
       "rectors": {
         "2026": "Raquel Bernal Salazar",
-        "2027": "",
-        "2028": ""
-      },
-      "type": "Universidad"
-    },
-    {
-      "name": "Universidad de Los Andes (Colombia)",
-      "country": "Colombia",
-      "foundation_year": 1948,
-      "day": 16,
-      "month": 11,
-      "rectors": {
-        "2026": "Raquel Bernal",
         "2027": "",
         "2028": ""
       },

@@ -2,9 +2,9 @@
   "meta": {
     "title": "Efemérides universitarias",
     "source": "Repositorio_Maestro_Efemerides_Universitarias.xlsx",
-    "records": 219,
+    "records": 224,
     "synced_from_onedrive": true,
-    "last_sync_utc": "2026-10-06T15:46:03+00:00"
+    "last_sync_utc": "2026-10-08T01:54:05+00:00"
   },
   "institutions": [
     {
@@ -437,6 +437,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad Indsutrial de Santander",
+      "country": "Colombia",
+      "foundation_year": 1948,
+      "day": 1,
+      "month": 3,
+      "rectors": {
+        "2026": "Dr. Hernán Díaz Porras",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Brown University",
       "country": "Estados Unidos",
       "foundation_year": 1764,
@@ -470,6 +483,19 @@
       "month": 3,
       "rectors": {
         "2026": "Francisco José Gómez Ortiz",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad Tecnológica de Pereira",
+      "country": "Colombia",
+      "foundation_year": 1958,
+      "day": 4,
+      "month": 3,
+      "rectors": {
+        "2026": "Dr. Luis Fernando Gaviria Trujillo",
         "2027": "",
         "2028": ""
       },
@@ -892,6 +918,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad EAFIT",
+      "country": "Colombia",
+      "foundation_year": 1960,
+      "day": 4,
+      "month": 5,
+      "rectors": {
+        "2026": "Prof. Claudia Restrepo Montoya",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Korea University",
       "country": "Corea del Sur",
       "foundation_year": 1905,
@@ -1159,6 +1198,19 @@
       "month": 6,
       "rectors": {
         "2026": "Ernesto Ramiro Estacio",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
+      "name": "Universidad del Valle",
+      "country": "Colombia",
+      "foundation_year": 1945,
+      "day": 11,
+      "month": 6,
+      "rectors": {
+        "2026": "Dr. Guillermo Murillo Vargas",
         "2027": "",
         "2028": ""
       },
@@ -1815,6 +1867,19 @@
       "type": "Universidad"
     },
     {
+      "name": "Universidad de la Sabana",
+      "country": "Colombia",
+      "foundation_year": 1979,
+      "day": 21,
+      "month": 9,
+      "rectors": {
+        "2026": "Dr. Rolando Andrés Roncancio Rachid",
+        "2027": "",
+        "2028": ""
+      },
+      "type": "Universidad"
+    },
+    {
       "name": "Universidad Autónoma de Manizales",
       "country": "Colombia",
       "foundation_year": 1979,
@@ -2211,7 +2276,7 @@
       "day": 14,
       "month": 10,
       "rectors": {
-        "2026": "Luis Fernando Polanía Obando",
+        "2026": "Dr. Luis Fernando Polanía Obando",
         "2027": "",
         "2028": ""
       },
@@ -2224,7 +2289,7 @@
       "day": 15,
       "month": 10,
       "rectors": {
-        "2026": "Dr. Luis Fernando Polanía Obando",
+        "2026": "Dr. Oh Yeon Cheon",
         "2027": "",
         "2028": ""
       },
@@ -2445,7 +2510,7 @@
       "day": 2,
       "month": 11,
       "rectors": {
-        "2026": "",
+        "2026": "Dr.Luquegi Gil Neira",
         "2027": "",
         "2028": ""
       },
